@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
          <div id="bannerMenu">
             <img src="realBanner.png" alt="Real Imaginary - The Real Estate Agency" /><br />
-            <a href="Default.aspx"><img src="homeButton.png"/></a>
+            <a href="Default.aspx"><img src="images/homeButton.png"/></a>
             <a href="SellHouse.aspx"><img src="sellHouse.png" /></a>
             <a href="ContactUs.aspx"><img src="contactUs.png" /></a>
         </div>

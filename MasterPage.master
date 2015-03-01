@@ -1,11 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" %>
-
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 <!DOCTYPE html>
 <link rel="stylesheet" href="stylesheet.css">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
      <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-    <title></title>
+    <title>Real Imaginary - The Real Estate Agency</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -13,7 +12,6 @@
          <header>
              <div class="sign">
                  <div class="inputsign">
-
                      <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None"/>
                      <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None"/>
                      <asp:TextBox ID="password" runat="server" Text="Password" CssClass="userPw" ForeColor="Silver" TextMode="Password" ></asp:TextBox>
@@ -31,18 +29,28 @@
             <asp:Button ID="listProperty" runat="server" Text="Property Listing" CssClass="listProperty" ForeColor="White" BorderStyle="None"/>
             <asp:Button ID="Selling" runat="server" Text="Selling A House" CssClass="Selling" ForeColor="White" BorderStyle="None"/>
             <asp:Button ID="ContactUs" runat="server" Text="Contact Us" CssClass="ContactUs" ForeColor="White" BorderStyle="None" />
-            </div>            
+            </div>
+        <asp:ContentPlaceHolder id="header" runat="server">        
+        </asp:ContentPlaceHolder>            
         </header>
 
        <div id="seachbox">
-
        </div>
 
         <footer>
         <p>Created by Real Imaginary</p>
+        <asp:ContentPlaceHolder id="footer" runat="server">        
+        </asp:ContentPlaceHolder>    
         </footer>
 
   </div>  
         </form>
 </body>
 </html>
+
+
+
+
+
+        
+

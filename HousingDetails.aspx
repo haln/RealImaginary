@@ -26,15 +26,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id ="login">
-            Username:<input id="userlogin" type="text" /> Password:<input id="passwordlogin" type="password" />
-        </div>
-        <div id="bannerMenu">
-            <img src="realBanner.png" alt="Real Imaginary - The Real Estate Agency" /><br />
-            <a href="HousingDetails.aspx"><img src="homeButton.png"/></a>
-            <a href="SellHouse.aspx"><img src="sellHouse.png" /></a>
-            <a href="ContactUs.aspx"><img src="contactUs.png" /></a>
-        </div>
+      
         <div id="search">
             <h4>Search Bar</h4>
             <input id="searchBar" type="text" />

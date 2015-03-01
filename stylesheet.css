@@ -1,35 +1,44 @@
 ﻿body { font-family:Verdana; font-size:12px; margin:0 auto; background-color:#ececec;}
 #container {margin: 0 auto; min-height:100%;height:auto !important;height:100%; position:relative; }
-
+header {
+    height:317px;
+}
+.banner {
+    height:285px;
+    width:100%;
+    margin-top:auto;
+}
 .banner-background {
-
-background-image:url(header-bg.png);
-height:285px;
-width:100%;
-position: absolute;
-background-repeat: no-repeat;
-background-size:cover;
-background-position:center;
+    background-image:url("images/header-bg.png");
+    height:285px;
+    width:100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    z-index:-1;
 }
 .mask {
-background-color:black;
-opacity:0.3;
-width:100%;
-position: absolute;
-background-size:cover;
-margin-top:0px;
-
+    background-image: url(images/mask.png);
+    background-color:black;
+    z-index: 1;
+    opacity: 0.4;
+    width: 100%;
+    background-size: cover;
+    float: left;
+    height: 285px;
 }
 
 .logo {
+    background-image:url(images/logo.png);
     position:relative;
     text-align:center;
-    width:212px;
-    height:89px;
+    width:377px;
+    height:238px;
+    background-repeat: no-repeat;
     margin-left: auto;
-margin-right: auto;
-    top: 0px;
-    left: -83px;
+    margin-right: auto;
+    
 }
 
 .sign {
@@ -40,20 +49,77 @@ margin-right: auto;
     background-color:#86B3B0;
     padding:2px;
 }
-.inputsign {
-    position:relative;
-    margin-top:5px;
+
+
+
+.menu {
+    width:370px;
+    height:32px;
+    margin-top:auto;
+    position: absolute;
+    left: 553px;
+}
+
+.signin {
+    background-color:#0e86cb;
+    width:106px;
+    height:30px;
     float:right;
-    padding:2px;
+    margin-left:24px;
+
+}
+
+.signup {
+    background-color:#14afa7;
+    width:106px;
+    height:30px;
+    float:right;
+    margin-left:24px;
+    margin-right:24px;
+}
+
+.userName {
+    width:200px;
+    height:24px;
+    float:right;
+
+}
+.userPw {
+    width:200px;
+    height:24px;
+    float:right;
+    margin-left:24px;
+
+}
+
+
+
+.listProperty {
+    background-color:#1472dc;
+    width:106px;
+    height:32px;
+    float:left;
+    margin-right:27px;
+}
+.Selling {
+    background-color:#ecab1c;
+    width:106px;
+    height:32px;
+    float:left;
+}
+.ContactUs {
+     background-color:#247e0a;
+    width:106px;
+    height:32px;
+    float:right;
 }
 .line {
-    height:2px;
-    background-color:black;
-    opacity:0.4;
-    position:relative;
-    width:100%;
-    margin-top:195px;
-
+    height: 2px;
+    background-color: black;
+    opacity: 0.4;
+    position: relative;
+    width: 100%;
+    margin-top: 283px;
 }
 
 footer {
