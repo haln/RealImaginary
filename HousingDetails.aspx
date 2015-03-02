@@ -1,8 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HousingDetails.aspx.cs" MasterPageFile="~/MasterPage.master" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HousingDetails.aspx.cs" Inherits="_Default" %>
 
-<asp:Content ContentPlaceHolderID="header" runat="server">        
-        </asp:Content> 
-<asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Real Imaginary - The Real Estate Agency</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+    <script src="jquery-ui-multiselect-widget-master/src/jquery.multiselect.js"></script>
+    <link href="jquery-ui-multiselect-widget-master/jquery.multiselect.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".singleSelect").multiselect({
+                multiple: false,
+                header: "Select an option",
+                noneSelectedText: "Select an Option",
+                selectedList: 1
+            });
+            $(".multipleSelect").multiselect({
+                selectedList: 3
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
       
         <div id="search">
             <h4>Search Bar</h4>
@@ -108,4 +131,6 @@
             <br />
             Email: <asp:Label ID="lbl_agentEmail" runat="server" Text=""></asp:Label>
         </div>
-</asp:Content>
+    </form>
+</body>
+</html>
