@@ -113,6 +113,7 @@
         </div>
 
         <asp:SqlDataSource ID="housingData" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [HOUSE] ORDER BY [HOUSE_ID]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="evalData" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [EVALUATION] ORDER BY [HOUSE_ID]"></asp:SqlDataSource>
         <div id="resultsDiv">
         </div>
     </form>

@@ -5,8 +5,8 @@ using System.Web;
 
 public class House
 {
-	public House(string houseID, string address, string askPrice, string picture, string buildingType,
-        string sqrFeet, string propSqrFeet, string beds, string baths, string age, string features)
+    public House(String houseID, String address, String askPrice, String picture, String buildingType,
+        String sqrFeet, String propSqrFeet, String beds, String baths, String age, String features)
 	{
         this.houseID = houseID;
         this.address = address;
