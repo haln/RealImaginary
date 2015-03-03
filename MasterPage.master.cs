@@ -10,7 +10,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         //If it's not the first page, grab filter settings and set them appropriately
-        if (IsPostBack)
+        if (HttpContext.Current.Request["ctl00$budgetMin"] != null)
         {
             budgetMin.Items.FindByValue(HttpContext.Current.Request["ctl00$budgetMin"]).Selected = true;
             budgetMax.Items.FindByValue(HttpContext.Current.Request["ctl00$budgetMax"]).Selected = true;
