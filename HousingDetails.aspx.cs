@@ -9,9 +9,9 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["House"] != null && Session["Agent"] != null)
+        if (Session["House"] != null)
         {
-            lbl_address.Text = ((House)Session["House"]).address;
+            lbl_address.Text = ((House)Session["House"]).address.ToString();
             lbl_age.Text = ((House)Session["House"]).age;
             lbl_ask.Text = ((House)Session["House"]).askPrice;
             lbl_bath.Text = ((House)Session["House"]).baths;
@@ -20,6 +20,9 @@ public partial class _Default : System.Web.UI.Page
             lbl_propSqrFeet.Text = ((House)Session["House"]).propSqrFeet;
             lbl_sqrFeet.Text = ((House)Session["House"]).sqrFeet;
             lbl_type.Text = ((House)Session["House"]).buildingType;
+        }
+        if (Session["Agent"] != null)
+        {
             lbl_agentEmail.Text = ((Agent)Session["Agent"]).email;
             lbl_agentName.Text = ((Agent)Session["Agent"]).name;
             lbl_agentPhone.Text = ((Agent)Session["Agent"]).phone;

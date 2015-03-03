@@ -42,7 +42,7 @@
             <input id="searchSubmit" runat="server" value="Submit" type="submit"/>
             <h4>Filters</h4>
             <label for="budgetMin"">Min</label>
-            <select id="budgetMin" name="budgetMin" class="singleSelect">
+            <select id="budgetMin" runat="server" name="budgetMin" class="singleSelect">
                 <option value="0">$0</option>
                 <option value="50000">$50,000</option>
                 <option value="100000">$100,000</option>
@@ -53,7 +53,7 @@
                 <option value="0">Unlimited</option>
             </select>
             <label for="budgetMax">Max</label>
-            <select id="budgetMax" name="budgetMax" class="singleSelect">
+            <select id="budgetMax" runat="server" name="budgetMax" class="singleSelect">
                 <option value="50000">$50,000</option>
                 <option value="100000">$100,000</option>
                 <option value="200000">$200,000</option>
