@@ -5,6 +5,7 @@ using System.Web;
 
 public class House
 {
+    //Constructor with evaluation
     public House(String houseID, String address, String askPrice, String picture, String buildingType,
         String sqrFeet, String propSqrFeet, String beds, String baths, String age, String features)
 	{
@@ -20,6 +21,14 @@ public class House
         this.age = age;
         this.features = features;
 	}
+    //Constructor for no evaluation
+    public House(String houseID, String address, String askPrice, String picture)
+    {
+        this.houseID = houseID;
+        this.address = address;
+        this.askPrice = askPrice;
+        this.picture = picture;
+    }
     public String houseID { get; set; }
     public String address { get; set; }
     public String askPrice { get; set; }

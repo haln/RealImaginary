@@ -9,6 +9,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (IsPostBack)
+        {
+            budgetMin.Items.FindByValue(HttpContext.Current.Request["budgetMin"]).Selected = true;
+            budgetMax.Items.FindByValue(HttpContext.Current.Request["budgetMax"]).Selected = true;
+        }
     }
 }
