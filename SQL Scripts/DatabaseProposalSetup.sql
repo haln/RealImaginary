@@ -259,11 +259,11 @@ INSERT INTO SELLER VALUES(
 
 --Houses
 INSERT INTO HOUSE VALUES(
-'6001', null, '5001', '3001', '1467 10th Ave New Westminister', 'unsold', '5000000', null, null);
+'6001', null, '5001', '3001', '1467 10th Ave New Westminister', 'unsold', '5000000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6002', null, '5002', '3003', '1468 10th Ave New Westminister', 'unsold', '7000000', null, null);
+'6002', null, '5002', '3003', '1468 10th Ave New Westminister', 'unsold', '7000000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6003', '4003', '5001', '3004', '1469 10th Ave New Westminister', 'sold', '8000000', '7000000', null);
+'6003', '4003', '5001', '3004', '1469 10th Ave New Westminister', 'sold', '8000000', '7000000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
 '6004', null, '5003', '3002', '1470 10th Ave New Westminister', 'unsold', '6500000', null, null);
 INSERT INTO HOUSE VALUES(

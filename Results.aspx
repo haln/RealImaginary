@@ -11,11 +11,17 @@
             <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
             <ItemStyle BackColor="White" ForeColor="#333333" />
             <ItemTemplate>
-                HouseID: <asp:Label ID="houseID" runat="server" Text='<%# Eval("HOUSE_ID1") %>'></asp:Label><br />
-                Asking Price: <asp:Label ID="Label1" runat="server" Text='<%# Eval("HOUSE_ASKINGPRICE") %>'></asp:Label><br />
-                EvalID: <asp:Label ID="evalID" runat="server" Text='<%# Eval("EVAL_ID") %>'></asp:Label>
-                <br />
-                <asp:LinkButton ID="LinkButton1" runat="server" OnCommand="LinkButton1_Click" CommandArgument='<%# Eval("HOUSE_ID1") + "," + Eval("EVAL_ID")%>'>Get housing details</asp:LinkButton>
+                <div class="result">
+                    <img width="300" height="200" class="housePicture" alt="houseImage" src='<%# "HousePictures/" + Eval("HOUSE_ID1") + "/" + Eval("HOUSE_PICTURE") %>' />
+                    <div class="houseResult">
+                        <asp:Label class="houseAddress" ID="houseAddress" runat="server" Text='<%# Eval("HOUSE_ADDRESS") %>'></asp:Label><br />
+                        <asp:Label class="askingPrice" ID="askingPrice" runat="server" Text='<%# String.Format("{0:C}", Decimal.Parse(Eval("HOUSE_ASKINGPRICE").ToString()))  %>'></asp:Label><br />
+                        ListingID: <asp:Label class="houseResultInfo" ID="evalID" runat="server" Text='<%# Eval("HOUSE_ID1") %>'></asp:Label><br />
+                        Building Type: <asp:Label class="houseResultInfo" ID="propType" runat="server" Text='<%# Eval("EVAL_PTYPE") %>'></asp:Label><br />
+                    </div>
+                    <br />
+                    <asp:LinkButton class="link" ID="LinkButton1" runat="server" OnCommand="LinkButton1_Click" CommandArgument='<%# Eval("HOUSE_ID1") + "," + Eval("EVAL_ID")%>'>Get housing details</asp:LinkButton>
+                </div>
             </ItemTemplate>
             <SelectedItemStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
         </asp:DataList>
