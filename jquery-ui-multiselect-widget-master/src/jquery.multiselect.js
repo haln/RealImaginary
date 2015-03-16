@@ -28,8 +28,8 @@
     // default options
     options: {
       header: true,
-      height: 175,
-      minWidth: 225,
+     // height: 150,
+      minWidth: 40,
       classes: '',
       checkAllText: 'Check all',
       uncheckAllText: 'Uncheck all',
@@ -72,8 +72,8 @@
           .appendTo($(o.appendTo)),
 
         header = (this.header = $('<div />'))
-          .addClass('ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix')
-          .appendTo(menu),
+        //  .addClass('ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix')
+        //  .appendTo(menu),
 
         headerLinkContainer = (this.headerLinkContainer = $('<ul />'))
           .addClass('ui-helper-reset')

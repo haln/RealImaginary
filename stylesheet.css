@@ -139,9 +139,50 @@ footer {
 }
 
 #searchbox {
+    background-color:#0e86cb;
     margin-top:20px;
-    height:100px;
+    padding-top:15px;
+    height:120px;
     width:80%;
     margin-left:auto;
     margin-right:auto;
+}
+
+#search {
+    background-color:white;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    height: 40px;
+    width: 60%;
+}
+
+#searchBar {
+  height: 24px;
+  width: 83%;
+  padding: 8px 15px;
+  border: 0px solid #dbdbdb;
+}
+
+#searchSubmit{
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #207cca;
+    background-color:#207cca;
+    color:#fafafa;
+    top: 0px;
+    width: 86px;
+}
+
+#filter{
+    position:relative;
+    margin-top:25px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+#propertyType{
+    width:150px;
 }
