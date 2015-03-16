@@ -28,7 +28,16 @@ public class House
         this.address = address;
         this.askPrice = askPrice;
         this.picture = picture;
+        buildingType = "To be determined";
+        sqrFeet = "To be determined";
+        propSqrFeet = "To be determined";
+        beds = "To be determined";
+        baths = "To be determined";
+        age = "To be determined";
+        features = "To be determined";
     }
+
+
     public String houseID { get; set; }
     public String address { get; set; }
     public String askPrice { get; set; }

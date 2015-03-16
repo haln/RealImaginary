@@ -7,7 +7,7 @@
         <br />
         <div id="propertyListings">
             <h2>Property Listings</h2>
-            <asp:SqlDataSource ID="HousingDataSource" runat="server"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="HousingDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT]"></asp:SqlDataSource>
         </div>
         <div>
             Address: <asp:Label ID="lbl_address" runat="server" Text=""></asp:Label>
@@ -29,6 +29,7 @@
             Age: <asp:Label ID="lbl_age" runat="server" Text=""></asp:Label>
             <br />
             Additional Features: <asp:Label ID="lbl_features" runat="server" Text=""></asp:Label>
+            <br />
         </div>
         <div>
             For more information, please contact: <br />
@@ -37,5 +38,6 @@
             Phone: <asp:Label ID="lbl_agentPhone" runat="server" Text=""></asp:Label>
             <br />
             Email: <asp:Label ID="lbl_agentEmail" runat="server" Text=""></asp:Label>
+            <asp:SqlDataSource ID="sqlds_agent" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT]"></asp:SqlDataSource>
         </div>
 </asp:Content>

@@ -94,6 +94,7 @@ public partial class Results : System.Web.UI.Page
         }
         //Fill the Session with data and transfer to housingdetails
         Session["House"] = theHouse;
+        Session["AgentID"] = house[3].ToString();
         Server.Transfer("HousingDetails.aspx");
     }
 }
