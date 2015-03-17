@@ -11,8 +11,5 @@ public partial class admin_listing : System.Web.UI.Page
     {
 
     }
-    protected void btnAgentsManage_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("admin-agents.aspx");
-    }
+
 }
