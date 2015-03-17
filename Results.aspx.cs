@@ -25,14 +25,14 @@ public partial class Results : System.Web.UI.Page
         String ptype = "(";
         if (masterPost["ctl00$propertyType"] == "" || masterPost["ctl00$propertyType"] == null)
         {
-            ptype = "EVAL_PTYPE LIKE '%%'";
+            ptype = "(EVAL_PTYPE LIKE '%%' OR EVAL_PTYPE IS NULL)";
         }
         else
         {
             proptype = masterPost["ctl00$propertyType"].Split(',');
             if (proptype.Length == 1)
             {
-                ptype = "EVAL_PTYPE LIKE '" + proptype[0] + "'";
+                ptype = "(EVAL_PTYPE LIKE '" + proptype[0] + "' OR EVAL_PTYPE IS NULL)";
             }
             else
             {
@@ -40,16 +40,16 @@ public partial class Results : System.Web.UI.Page
                 {
                     ptype += "EVAL_PTYPE LIKE '"+proptype[i] + "' OR ";
                 }
-                ptype += "EVAL_PTYPE LIKE '" + proptype[proptype.Length - 1] + "')";
+                ptype += "EVAL_PTYPE LIKE '" + proptype[proptype.Length - 1] + "' OR EVAL_PTYPE IS NULL)";
             }
         }
         //The string used to filter for the desired houses
         String houseFilterString = "HOUSE_ASKINGPRICE >=" + masterPost["ctl00$budgetMin"] +
             " AND HOUSE_ASKINGPRICE <=" + masterPost["ctl00$budgetMax"] +
             " AND HOUSE_ADDRESS LIKE '%" + masterPost["ctl00$city"] + "%'" +
-            " AND EVAL_BEDROOMS >=" + masterPost["ctl00$bedrooms"] +
-            " AND EVAL_BATHROOMS >=" + masterPost["ctl00$bathrooms"] +
-            " AND EVAL_PROP_SQFT >=" + masterPost["ctl00$squareFootage"] +
+            " AND (EVAL_BEDROOMS >=" + masterPost["ctl00$bedrooms"] + " OR EVAL_BEDROOMS IS NULL)" +
+            " AND (EVAL_BATHROOMS >=" + masterPost["ctl00$bathrooms"] + " OR EVAL_BATHROOMS IS NULL)" +
+            " AND (EVAL_PROP_SQFT >=" + masterPost["ctl00$squareFootage"] + " OR EVAL_PROP_SQFT IS NULL)" +
             " AND " + ptype;
 
         //Grab data from the house and evaluation tables
