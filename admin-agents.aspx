@@ -77,6 +77,7 @@
                 </asp:SqlDataSource>
                 <br />
                 <h2>Add an agent below:</h2>
+                <asp:Label ID="lblError" runat="server" EnableViewState="False"></asp:Label>
                 <br />
                 <table>
                     <tr>
@@ -123,7 +124,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btnAddAgent" runat="server" Text="Add new agent" ValidationGroup="insert" /></td>
+                            <asp:Button ID="btnAddAgent" runat="server" Text="Add new agent" ValidationGroup="insert" OnClick="btnAddAgent_Click" /></td>
                     </tr>
                 </table>
             </div>
