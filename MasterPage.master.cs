@@ -14,11 +14,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             budgetMin.Items.FindByValue(HttpContext.Current.Request["ctl00$budgetMin"]).Selected = true;
             budgetMax.Items.FindByValue(HttpContext.Current.Request["ctl00$budgetMax"]).Selected = true;
-            city.Items.FindByValue(HttpContext.Current.Request["ct100$city"]).Selected = true;
-            bedrooms.Items.FindByValue(HttpContext.Current.Request["ct100$bedrooms"]).Selected = true;
-            bathrooms.Items.FindByValue(HttpContext.Current.Request["ct100$bathrooms"]).Selected = true;
-            squareFootage.Items.FindByValue(HttpContext.Current.Request["ct100$squareFootage"]).Selected = true;
-            propertyType.Items.FindByValue(HttpContext.Current.Request["ct100$propertyType"]).Selected = true;
+            city.Items.FindByValue(HttpContext.Current.Request["ctl00$city"]).Selected = true;
+            bedrooms.Items.FindByValue(HttpContext.Current.Request["ctl00$bedrooms"]).Selected = true;
+            bathrooms.Items.FindByValue(HttpContext.Current.Request["ctl00$bathrooms"]).Selected = true;
+            squareFootage.Items.FindByValue(HttpContext.Current.Request["ctl00$squareFootage"]).Selected = true;
+            if (HttpContext.Current.Request["ctl00$propertyType"] != null)
+            {
+                propertyType.Items.FindByValue(HttpContext.Current.Request["ctl00$propertyType"]).Selected = true;
+            }
         }
     }
 }
