@@ -24,11 +24,11 @@ public partial class Results : System.Web.UI.Page
         //The string used to filter for the desired houses
         if (masterPost["ctl00$propertyType"] == "" || masterPost["ctl00$propertyType"] == null)
         {
-            proptype = "'%'";
+            proptype = "'%%'";
         }
         else
         {
-            proptype = masterPost["ct100$propertyType"];
+            proptype = "'"+masterPost["ctl00$propertyType"].ToString()+"'";
         }
         String houseFilterString = "HOUSE_ASKINGPRICE >=" + masterPost["ctl00$budgetMin"] +
             " AND HOUSE_ASKINGPRICE <=" + masterPost["ctl00$budgetMax"] +
@@ -36,7 +36,7 @@ public partial class Results : System.Web.UI.Page
             " AND EVAL_BEDROOMS >=" + masterPost["ctl00$bedrooms"] +
             " AND EVAL_BATHROOMS >=" + masterPost["ctl00$bathrooms"] +
             " AND EVAL_PROP_SQFT >=" + masterPost["ctl00$squareFootage"] +
-            " AND EVAL_PTYPE LIKE" + proptype;
+            " AND EVAL_PTYPE LIKE " + proptype;
 
         //Grab data from the house and evaluation tables
         //Fill the DataList with the filtered grabbed data
