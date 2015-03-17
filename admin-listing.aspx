@@ -33,10 +33,13 @@
                     <asp:Button ID="ContactUs" runat="server" Text="Contact Us" CssClass="ContactUs" ForeColor="White" BorderStyle="None" PostBackUrl="~/ContactUs.aspx" />
                 </div>
             </header>
-            <h1>Listing management</h1>
-            <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="true" PostBackUrl="~/admin-agents.aspx" />
-            <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="false" />
-            <br />
+            <div id="adminHeader">
+                <h1>Listing management</h1>
+                <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="true" PostBackUrl="~/admin-agents.aspx" />
+                <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="false" />
+                <br />
+            </div>
+
             <div id="agentTable">
                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="HOUSE_ID" DataSourceID="SqlDataSource1">
                     <Columns>
@@ -87,6 +90,6 @@
                 <p>Created by Real Imaginary</p>
             </footer>
         </div>
-        </form>
+    </form>
 </body>
 </html>
