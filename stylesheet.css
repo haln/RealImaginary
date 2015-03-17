@@ -186,3 +186,17 @@ footer {
 #propertyType{
     width:150px;
 }
+
+
+#budgetMin {
+    width:110px;
+}
+#budgetMax {
+    width: 110px;
+}
+#city {
+    width: 150px;
+}
+#squareFootage {
+    width:80px;
+}
