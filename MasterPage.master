@@ -53,10 +53,8 @@
                 </asp:ContentPlaceHolder>
             </header>
             <div id="searchbox">
-                <div id="search">
-                    
-                     <span><input id="searchBar" type="text" placeholder="Enter an address" /><input id="searchSubmit" runat="server" value="Search" type="submit"/></span>
-                        
+                <div id="search">      
+                     <span><input id="searchBar" type="text" placeholder="Enter an address" /><input id="searchSubmit" runat="server" value="Search" type="submit"/></span>   
                 <br/>
                 </div>
                 <div id="filter">
@@ -130,12 +128,9 @@
                 <option value="commercial">Commercial</option>
             </select>
                 </div>
-            <br />
-                
-        
-
+            <br /></div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder></div>
+            </asp:ContentPlaceHolder>
             <footer>
                 <p>Created by Real Imaginary</p>
                 <asp:ContentPlaceHolder ID="footer" runat="server">

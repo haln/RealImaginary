@@ -200,3 +200,27 @@ footer {
 #squareFootage {
     width:80px;
 }
+
+#resultsDiv {
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    height:auto;
+    margin-top:20px;
+}
+
+.houseAddress {
+    color:#14afa7;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.askingPrice {
+    font-size:20px;
+    color:black;
+
+}
+
+.houseResultInfo {
+    color:black;
+}
