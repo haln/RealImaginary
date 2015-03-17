@@ -110,7 +110,7 @@
             </select>
             <label for="squareFootage">Sq. Ft.</label>
             <select id="squareFootage" name="squareFootage" class="singleSelect">
-                <option value="9999999999">Any</option>
+                <option value="0">Any</option>
                 <option value="50">50ft+</option>
                 <option value="100">100ft+</option>
                 <option value="200">200ft+</option>
