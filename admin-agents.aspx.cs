@@ -12,8 +12,4 @@ public partial class admin : System.Web.UI.Page
 
     }
 
-    protected void btnListingManage_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("admin-listing.aspx");
-    }
 }
