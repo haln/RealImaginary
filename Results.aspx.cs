@@ -20,23 +20,37 @@ public partial class Results : System.Web.UI.Page
         housingTable = (DataView)housingData.Select(DataSourceSelectArguments.Empty);
         evalTable = (DataView)evalData.Select(DataSourceSelectArguments.Empty);
 
-        string proptype;
-        //The string used to filter for the desired houses
+        //Dealing with the multiple choices for property types
+        String[] proptype;
+        String ptype = "(";
         if (masterPost["ctl00$propertyType"] == "" || masterPost["ctl00$propertyType"] == null)
         {
-            proptype = "'%%'";
+            ptype = "EVAL_PTYPE LIKE '%%'";
         }
         else
         {
-            proptype = "'"+masterPost["ctl00$propertyType"].ToString()+"'";
+            proptype = masterPost["ctl00$propertyType"].Split(',');
+            if (proptype.Length == 1)
+            {
+                ptype = "EVAL_PTYPE LIKE '" + proptype[0] + "'";
+            }
+            else
+            {
+                for (int i = 0; i < proptype.Length-1; i++)
+                {
+                    ptype += "EVAL_PTYPE LIKE '"+proptype[i] + "' OR ";
+                }
+                ptype += "EVAL_PTYPE LIKE '" + proptype[proptype.Length - 1] + "')";
+            }
         }
+        //The string used to filter for the desired houses
         String houseFilterString = "HOUSE_ASKINGPRICE >=" + masterPost["ctl00$budgetMin"] +
             " AND HOUSE_ASKINGPRICE <=" + masterPost["ctl00$budgetMax"] +
             " AND HOUSE_ADDRESS LIKE '%" + masterPost["ctl00$city"] + "%'" +
             " AND EVAL_BEDROOMS >=" + masterPost["ctl00$bedrooms"] +
             " AND EVAL_BATHROOMS >=" + masterPost["ctl00$bathrooms"] +
             " AND EVAL_PROP_SQFT >=" + masterPost["ctl00$squareFootage"] +
-            " AND EVAL_PTYPE LIKE " + proptype;
+            " AND " + ptype;
 
         //Grab data from the house and evaluation tables
         //Fill the DataList with the filtered grabbed data

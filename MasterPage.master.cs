@@ -20,7 +20,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
             squareFootage.Items.FindByValue(HttpContext.Current.Request["ctl00$squareFootage"]).Selected = true;
             if (HttpContext.Current.Request["ctl00$propertyType"] != null)
             {
-                propertyType.Items.FindByValue(HttpContext.Current.Request["ctl00$propertyType"]).Selected = true;
+                String[] propType = HttpContext.Current.Request["ctl00$propertyType"].ToString().Split(',');
+                for (int i = 0; i < propType.Length; i++)
+                {
+                    propertyType.Items.FindByValue(propType[i]).Selected = true;
+                }
             }
         }
     }
