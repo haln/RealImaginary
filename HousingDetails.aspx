@@ -6,18 +6,18 @@
 
         <br />
         <div id="propertyListings">
-            <h2>Property Listings</h2>
+            
             <asp:SqlDataSource ID="HousingDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT]"></asp:SqlDataSource>
         </div>
-        <div>
-            Address: <asp:Label ID="lbl_address" runat="server" Text=""></asp:Label>
-            <br />
+        <div id="houseDetail">
+            <p class="houseAddress"><asp:Label ID="lbl_address" runat="server" Text=""></asp:Label></p>
+            
             House Type: <asp:Label ID="lbl_type" runat="server" Text=""></asp:Label>
+            <br /><br />
+            <p class="askingPrice">$<asp:Label ID="lbl_ask" runat="server" Text=""></asp:Label></p>
             <br />
-            Asking Price: <asp:Label ID="lbl_ask" runat="server" Text=""></asp:Label>
             <br />
-            <br />
-            Details: <br />
+            Details: <br /><br />
             Square Feet: <asp:Label ID="lbl_sqrFeet" runat="server" Text=""></asp:Label>
             <br />
             Property Sqaure Feet: <asp:Label ID="lbl_propSqrFeet" runat="server" Text=""></asp:Label>
@@ -30,7 +30,7 @@
             <br />
             Additional Features: <asp:Label ID="lbl_features" runat="server" Text=""></asp:Label>
             <br />
-        </div>
+        
         <div>
             For more information, please contact: <br />
             <asp:Label ID="lbl_agentName" runat="server" Text=""></asp:Label>
@@ -40,4 +40,5 @@
             Email: <asp:Label ID="lbl_agentEmail" runat="server" Text=""></asp:Label>
             <asp:SqlDataSource ID="sqlds_agent" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT]"></asp:SqlDataSource>
         </div>
+            </div>
 </asp:Content>

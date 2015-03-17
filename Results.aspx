@@ -8,9 +8,10 @@
         <asp:SqlDataSource ID="HouseJoinEvalDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM EVALUATION RIGHT OUTER JOIN HOUSE ON EVALUATION.HOUSE_ID = HOUSE.HOUSE_ID"></asp:SqlDataSource>
         <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#0E86CB" BorderStyle="Solid" BorderWidth="2px" CellPadding="19" GridLines="Both" RepeatDirection="Horizontal" ShowHeader="False"  RepeatColumns="3" CellSpacing="8" ShowFooter="False">
             <EditItemStyle CssClass="itemResult" />
-            <ItemStyle ForeColor="#666666" HorizontalAlign="Left" />
+            <ItemStyle ForeColor="#666666" HorizontalAlign="Left" Wrap="False" />
 
-            <SeparatorTemplate><b></SeparatorTemplate>
+            <SeparatorTemplate><b><br/>
+            </SeparatorTemplate>
             <ItemTemplate>
                 <div class="result">
                     <img width="300" height="200" class="housePicture" alt="houseImage" src='<%# "HousePictures/" + Eval("HOUSE_ID1") + "/" + Eval("HOUSE_PICTURE") %>' />
@@ -24,9 +25,9 @@
                     <asp:LinkButton class="link" ID="LinkButton1" runat="server" OnCommand="LinkButton1_Click" CommandArgument='<%# Eval("HOUSE_ID1") + "," + Eval("EVAL_ID")%>'>Get housing details</asp:LinkButton>
                 </div>
             </ItemTemplate>
-            <SeparatorTemplate><b><br/></SeparatorTemplate>
-            <SelectedItemStyle BackColor="#ECECEC" Font-Bold="True" ForeColor="#666666" HorizontalAlign="Center" />
-            <SeparatorStyle BackColor="#ECECEC" BorderStyle="None" HorizontalAlign="Center" />
+            <SeparatorTemplate><br/></SeparatorTemplate>
+         
+            <SeparatorStyle BackColor="#ECECEC" BorderStyle="None" HorizontalAlign="Center" Wrap="True" />
         </asp:DataList>
     </div>
 </asp:Content>

@@ -128,12 +128,10 @@
                 <option value="commercial">Commercial</option>
             </select>
                 </div>
-<<<<<<< HEAD
+
             <br /></div>
-=======
             <br />
 
->>>>>>> origin/master
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
             <footer>

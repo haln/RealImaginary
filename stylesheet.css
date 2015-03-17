@@ -1,4 +1,4 @@
-﻿body { font-family:Verdana; font-size:12px; margin:0 auto; background-color:#ececec;}
+﻿body { font-family:Verdana; font-size:12px; margin:0 auto; background-color:#ececec; color:white;}
 #container {margin: 0 auto; min-height:100%;height:auto !important;height:100%; position:relative; }
 #adminHeader {
     margin-right: auto;
@@ -184,7 +184,7 @@ footer {
     margin-top:25px;
     margin-left:auto;
     margin-right:auto;
-
+      width: 95%;
 }
 
 #propertyType{
@@ -215,7 +215,7 @@ footer {
 
 .houseAddress {
     color:#14afa7;
-    font-size:15px;
+    font-size:17px;
     font-weight:bold;
 }
 
@@ -227,4 +227,20 @@ footer {
 
 .houseResultInfo {
     color:black;
+}
+.itemResult {
+    border-bottom-style:solid;
+    border-color:#0E86CB;
+}
+
+.datalistResult {
+    background-color:white;
+}
+#houseDetail {
+    color:#808080;
+    font-size:14px;
+    height:auto;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 }
