@@ -94,31 +94,31 @@
             </select>
             <label for="bedrooms">Bedrooms</label>
             <select id="bedrooms" name="bedrooms" class="singleSelect">
-                <option>1+</option>
-                <option>2+</option>
-                <option>3+</option>
-                <option>4+</option>
-                <option>5+</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
             </select>
             <label for="bathrooms">Bathrooms</label>
             <select id="bathrooms" name="bathrooms" class="singleSelect" visible="True">
-                <option>1+</option>
-                <option>2+</option>
-                <option>3+</option>
-                <option>4+</option>
-                <option>5+</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
             </select>
             <label for="squareFootage">Sq. Ft.</label>
             <select id="squareFootage" name="squareFootage" class="singleSelect">
-                <option>Any</option>
-                <option>50ft+</option>
-                <option>100ft+</option>
-                <option>200ft+</option>
-                <option>500ft+</option>
-                <option>1000ft+</option>
-                <option>2000ft+</option>
-                <option>5000ft+</option>
-                <option>10000ft+</option>
+                <option value="9999999999">Any</option>
+                <option value="50">50ft+</option>
+                <option value="100">100ft+</option>
+                <option value="200">200ft+</option>
+                <option value="500">500ft+</option>
+                <option value="1000">1000ft+</option>
+                <option value="2000">2000ft+</option>
+                <option value="5000">5000ft+</option>
+                <option value="10000">10000ft+</option>
             </select>
             <label for="propertyType">Property Types</label>
             <select title="Property Type" id="propertyType" multiple="multiple" name="propertyType" class="multipleSelect">
@@ -131,8 +131,6 @@
             </select>
                 </div>
             <br />
-                
-        
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder></div>
