@@ -215,12 +215,12 @@ footer {
 
 .houseAddress {
     color:#14afa7;
-    font-size:17px;
+    font-size:19px;
     font-weight:bold;
 }
 
 .askingPrice {
-    font-size:20px;
+    font-size:22px;
     color:black;
 
 }
@@ -237,10 +237,66 @@ footer {
     background-color:white;
 }
 #houseDetail {
-    color:#808080;
-    font-size:14px;
+    color:black;
+    font-size:17px;
     height:auto;
     width:80%;
     margin-left:auto;
     margin-right:auto;
+}
+
+.detail1 {
+    width:27%;
+    height:700px;
+    float:left;
+    margin-right:15px;
+}
+.address {
+    color:#14afa7;
+    font-size:25px;
+    font-weight:bold;
+}
+.price {
+    font-size:25px;
+    font-weight:bold;
+    color:#0e86cb;
+}
+.detail2 {
+    
+    float:left;
+    width:30%;
+    height:auto;
+}
+.detail3 img{
+    margin:0;
+    float:right;
+    width:35%;
+    height:auto;
+}
+.detail4 {
+    float:left;
+    width:28%;
+    height:200px;
+    margin-top:170px;    
+    padding:10px;
+    color:white;
+    background-color:#ecab1c;
+}
+.agentInfo {
+    font-weight:bold;
+    color:black;
+    font-size:25px;
+}
+.agentPhone {
+    color:#0e86cb;
+    font-weight:bold;
+    font-size:23px;
+}
+.detail5 img{
+    position:relative;
+    float:right;
+    width:35%;
+    height:auto;
+    margin-top:15px;
+    
 }
