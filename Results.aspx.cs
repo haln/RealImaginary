@@ -21,7 +21,13 @@ public partial class Results : System.Web.UI.Page
         evalTable = (DataView)evalData.Select(DataSourceSelectArguments.Empty);
         
         //The string used to filter for the desired houses
-        String houseFilterString = "HOUSE_ASKINGPRICE >=" + masterPost["ctl00$budgetMin"] + " AND HOUSE_ASKINGPRICE <=" + masterPost["ctl00$budgetMax"];
+        String houseFilterString = "HOUSE_ASKINGPRICE >=" + masterPost["ctl00$budgetMin"] + 
+            " AND HOUSE_ASKINGPRICE <=" + masterPost["ctl00$budgetMax"] +
+            " AND HOUSE_ADDRESS LIKE '%" + masterPost["ct100$city"] + "%'" +
+            " AND EVAL_BEDROOMS >=" + masterPost["ct100$bedrooms"] +
+            " AND EVAL_BATHROOMS >=" + masterPost["ct100$bathrooms"] +
+            " AND EVAL_PROP_SQFT >=" + masterPost["ct100$squareFootage"] +
+            " AND EVAL_PTYPE =" + masterPost["ct100$propertyType"];
 
         //Grab data from the house and evaluation tables
         //Fill the DataList with the filtered grabbed data
