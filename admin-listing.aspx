@@ -40,7 +40,7 @@
                 <br />
             </div>
 
-            <div id="agentTable">
+            <div id="listing">
                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="HOUSE_ID" DataSourceID="SqlDataSource1">
                     <Columns>
                         <asp:BoundField DataField="HOUSE_ID" HeaderText="HOUSE_ID" ReadOnly="True" SortExpression="HOUSE_ID" />
@@ -85,6 +85,9 @@
                         <asp:Parameter Name="HOUSE_ID" Type="String" />
                     </UpdateParameters>
                 </asp:SqlDataSource>
+            </div>
+            <div id="addListing">
+                
             </div>
             <footer>
                 <p>Created by Real Imaginary</p>

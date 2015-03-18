@@ -1,6 +1,17 @@
 ﻿body { font-family:Verdana; font-size:12px; margin:0 auto; background-color:#ececec;}
 #container {margin: 0 auto; min-height:100%;height:auto !important;height:100%; position:relative; }
 #adminHeader {
+    width:500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#listing {
+    width:1100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+#addListing {
+    width:400px;
     margin-right: auto;
     margin-left: auto;
 }
