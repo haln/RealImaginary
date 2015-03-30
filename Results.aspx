@@ -6,11 +6,11 @@
     <asp:SqlDataSource ID="evalData" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [EVALUATION] ORDER BY [HOUSE_ID]"></asp:SqlDataSource>
     <div id="resultsDiv">
         <asp:SqlDataSource ID="HouseJoinEvalDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM EVALUATION RIGHT OUTER JOIN HOUSE ON EVALUATION.HOUSE_ID = HOUSE.HOUSE_ID"></asp:SqlDataSource>
-        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#0E86CB" BorderStyle="Solid" BorderWidth="2px" CellPadding="19" GridLines="Both" RepeatDirection="Horizontal" ShowHeader="False"  RepeatColumns="3" CellSpacing="8" ShowFooter="False">
+        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#0E86CB" BorderStyle="Solid" BorderWidth="2px" CellPadding="14" GridLines="Both" RepeatDirection="Horizontal" ShowHeader="False"  RepeatColumns="3" CellSpacing="4" ShowFooter="False">
             <EditItemStyle CssClass="itemResult" />
             <ItemStyle ForeColor="#666666" HorizontalAlign="Left" Wrap="False" />
 
-            <SeparatorTemplate><b><br/>
+            <SeparatorTemplate><br/>
             </SeparatorTemplate>
             <ItemTemplate>
                 <div class="result">

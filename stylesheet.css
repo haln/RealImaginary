@@ -226,27 +226,24 @@ footer {
 
 .houseAddress {
     color:#14afa7;
-    font-size:19px;
+    font-size:17px;
     font-weight:bold;
 }
 
 .askingPrice {
-    font-size:22px;
+    font-size:20px;
     color:black;
 
 }
-
-.houseResultInfo {
-    color:black;
+.result {
+    width:80%;
 }
+
 .itemResult {
     border-bottom-style:solid;
     border-color:#0E86CB;
 }
 
-.datalistResult {
-    background-color:white;
-}
 #houseDetail {
     color:black;
     font-size:17px;
