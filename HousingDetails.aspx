@@ -35,7 +35,7 @@
             </div>
             <br />   
         <div class="detail3">
-            <img src="HousePictures/6001/house.jpg"/>
+            <asp:Image ID="img_house" runat="server" />
         </div>     
         <div class="detail4">
             For more information, please contact: <br />

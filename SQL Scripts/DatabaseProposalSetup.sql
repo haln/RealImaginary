@@ -265,59 +265,59 @@ INSERT INTO HOUSE VALUES(
 INSERT INTO HOUSE VALUES(
 '6003', '4003', '5001', '3004', '1469 10th Ave New Westminister', 'sold', '8000000', '7000000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6004', null, '5003', '3002', '1470 10th Ave New Westminister', 'unsold', '6500000', null, null);
+'6004', null, '5003', '3002', '1470 10th Ave New Westminister', 'unsold', '6500000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6005', '4005', '5007', '3002', '1471 10th Ave New Westminister', 'sold', '8800000', '7600000', null);
+'6005', '4005', '5007', '3002', '1471 10th Ave New Westminister', 'sold', '8800000', '7600000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6006', '4003', '5009', '3001', '1472 10th Ave New Westminister', 'sold', '9200000', '8800000', null);
+'6006', '4003', '5009', '3001', '1472 10th Ave New Westminister', 'sold', '9200000', '8800000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6007', null, '5010', '3001', '1473 10th Ave New Westminister', 'unsold', '3200000', null, null);
+'6007', null, '5010', '3001', '1473 10th Ave New Westminister', 'unsold', '3200000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6008', null, '5006', '3005', '1474 10th Ave New Westminister', 'unsold', '6900000', null, null);
+'6008', null, '5006', '3005', '1474 10th Ave New Westminister', 'unsold', '6900000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6009', '4001', '5003', '3003', '1475 10th Ave New Westminister', 'sold', '8000000', '7600000', null);
+'6009', '4001', '5003', '3003', '1475 10th Ave New Westminister', 'sold', '8000000', '7600000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6010', null, '5005', '3005', '1476 10th Ave New Westminister', 'unsold', '7600000', null, null);
+'6010', null, '5005', '3005', '1476 10th Ave New Westminister', 'unsold', '7600000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6011', null, '5008', '3002', '1477 10th Ave New Westminister', 'unsold', '5850000', null, null);
+'6011', null, '5008', '3002', '1477 10th Ave New Westminister', 'unsold', '5850000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6012', null, '5004', '3004', '1478 10th Ave New Westminister', 'unsold', '6550000', null, null);
+'6012', null, '5004', '3004', '1478 10th Ave New Westminister', 'unsold', '6550000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6013', null, '5001', '3001', '1478 East 10th Ave Vancouver', 'unsold', '550000', null, null);
+'6013', null, '5001', '3001', '1478 East 10th Ave Vancouver', 'unsold', '550000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6014', null, '5001', '3001', '220 West 12th Ave Vancouver', 'unsold', '1500000', null, null);
+'6014', null, '5001', '3001', '220 West 12th Ave Vancouver', 'unsold', '1500000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6015', null, '5004', '3004', '123 Alma St Vancouver', 'unsold', '900000', null, null);
+'6015', null, '5004', '3004', '123 Alma St Vancouver', 'unsold', '900000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6016', '4013', '5002', '3005', '478 East Hastings', 'sold', '90000', '80000', null);
+'6016', '4013', '5002', '3005', '478 East Hastings', 'sold', '90000', '80000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6017', null, '5008', '3003', '200 East Hastings', 'unsold', '500', null, null);
+'6017', null, '5008', '3003', '200 East Hastings', 'unsold', '500', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6018', null, '5005', '3005', '1478 Imperial St Burnaby', 'unsold', '1650000', null, null);
+'6018', null, '5005', '3005', '1478 Imperial St Burnaby', 'unsold', '1650000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6019', null, '5004', '3004', '880 Boundry Rd Burnaby ', 'unsold', '350000', null, null);
+'6019', null, '5004', '3004', '880 Boundry Rd Burnaby ', 'unsold', '350000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6020', null, '5007', '3002', '919 West 31st Ave Vancouver', 'unsold', '99999999', null, null);
+'6020', null, '5007', '3002', '919 West 31st Ave Vancouver', 'unsold', '99999999', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6021', '4010', '5009', '3001', '6707 Dow Ave Burnaby', 'sold', '750000', '750000', null);
+'6021', '4010', '5009', '3001', '6707 Dow Ave Burnaby', 'sold', '750000', '750000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6022', '4002', '5010', '3002', '1122 West 7th Ave Vancouver', 'sold', '450000', '475000', null);
+'6022', '4002', '5010', '3002', '1122 West 7th Ave Vancouver', 'sold', '450000', '475000', 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6023', null, '5006', '3003', '101 Oak St Vancouver', 'unsold', '900000', null, null);
+'6023', null, '5006', '3003', '101 Oak St Vancouver', 'unsold', '900000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6024', null, '5005', '3001', '4100 Deer Lake Pkwy Burnaby', 'unsold', '350000', null, null);
+'6024', null, '5005', '3001', '4100 Deer Lake Pkwy Burnaby', 'unsold', '350000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6025', null, '5009', '3005', '6287 Gilley Ave Burnaby', 'unsold', '600000', null, null);
+'6025', null, '5009', '3005', '6287 Gilley Ave Burnaby', 'unsold', '600000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6026', null, '5006', '3004', '400 Rumble St Burnaby', 'unsold', '90000', null, null);
+'6026', null, '5006', '3004', '400 Rumble St Burnaby', 'unsold', '90000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6027', null, '5001', '3004', '752 Griffiths Dr Burnaby', 'unsold', '880000', null, null);
+'6027', null, '5001', '3004', '752 Griffiths Dr Burnaby', 'unsold', '880000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6028', null, '5002', '3002', '202 Willingdon Ave Burnaby', 'unsold', '3450000', null, null);
+'6028', null, '5002', '3002', '202 Willingdon Ave Burnaby', 'unsold', '3450000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6029', null, '5003', '3003', '303 Commercial Dr Vancouver', 'unsold', '45000', null, null);
+'6029', null, '5003', '3003', '303 Commercial Dr Vancouver', 'unsold', '45000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
-'6030', null, '5004', '3005', '489 West 12th Ave Vancouver', 'unsold', '450000', null, null);
+'6030', null, '5004', '3005', '489 West 12th Ave Vancouver', 'unsold', '450000', null, 'house.jpg');
 
 --Evaluations
 INSERT INTO EVALUATION VALUES(

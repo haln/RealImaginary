@@ -36,6 +36,7 @@ public partial class _Default : System.Web.UI.Page
             lbl_propSqrFeet.Text = ((House)Session["House"]).propSqrFeet;
             lbl_sqrFeet.Text = ((House)Session["House"]).sqrFeet;
             lbl_type.Text = ((House)Session["House"]).buildingType;
+            img_house.ImageUrl = ((House)Session["House"]).picture;
         }
 
         //Display the agent details using the agent object

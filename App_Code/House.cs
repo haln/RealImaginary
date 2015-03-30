@@ -12,7 +12,7 @@ public class House
         this.houseID = houseID;
         this.address = address;
         this.askPrice = askPrice;
-        this.picture = picture;
+        this.picture = "HousePictures/" + houseID + "/" + picture;
         this.buildingType = buildingType;
         this.sqrFeet = sqrFeet;
         this.propSqrFeet = propSqrFeet;
@@ -27,7 +27,7 @@ public class House
         this.houseID = houseID;
         this.address = address;
         this.askPrice = askPrice;
-        this.picture = picture;
+        this.picture = "HousePictures/" + houseID + "/" + picture;
         buildingType = "To be determined";
         sqrFeet = "To be determined";
         propSqrFeet = "To be determined";
