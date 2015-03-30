@@ -259,7 +259,7 @@ INSERT INTO SELLER VALUES(
 
 --Houses
 INSERT INTO HOUSE VALUES(
-'6001', null, '5001', '3001', '1467 10th Ave New Westminister', 'unsold', '5000000', null, 'house.jpg');
+'6001', null, '5001', '3001', '1467 10th Ave New Westminister', 'unsold', '50000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
 '6002', null, '5002', '3003', '1468 10th Ave New Westminister', 'unsold', '7000000', null, 'house.jpg');
 INSERT INTO HOUSE VALUES(
@@ -336,3 +336,27 @@ INSERT INTO EVALUATION VALUES(
 '7007', '2003', '1002', '6007', '1300', '1100', 'no repair needed', 'many trees', '4', '3', '2', 'townhouse', '11', 'built in 2004', '3200000');
 INSERT INTO EVALUATION VALUES(
 '7008', '2002', '1001', '6008', '1000', '800', 'no repair needed', 'many trees', '2', '2', '2', 'commercial', '6', 'built in 2009', '6900000');
+INSERT INTO EVALUATION VALUES(
+'7009', '2001', '1001', '6010', '780', '900', 'leaking roof', 'balcony', '2', '3', '1', 'house', '6', 'built in 2009', '750000');
+INSERT INTO EVALUATION VALUES(
+'7010', '2002', '1002', '6012', '1200', '3000', 'scratched carpeting', 'pool', '4', '2', '3', 'house', '20', 'built in 1995', '6000000');
+INSERT INTO EVALUATION VALUES(
+'7011', '2003', '1001', '6015', '4000', '150', 'broken railing', 'deck', '5', '2', '2', 'house', '12', 'built in 2003', '1100000');
+INSERT INTO EVALUATION VALUES(
+'7012', '2001', '1002', '6016', '1200', '600', 'unfinished basement', 'sunroof', '2', '2', '1', 'townhouse', '16', 'built in 1999', '120000');
+INSERT INTO EVALUATION VALUES(
+'7013', '2002', '1002', '6018', '900', '700', 'no repair needed', 'balcony', '3', '1', '1', 'rental', '2', 'built in 2013', '800000');
+INSERT INTO EVALUATION VALUES(
+'7014', '2003', '1001', '6020', '1100', '1200', 'bad wiring', 'thunderdome', '4', '3', '1', 'commercial', '40', 'built in 1975', '90000000');
+INSERT INTO EVALUATION VALUES(
+'7015', '2001', '1002', '6021', '850', '600', 'water damage', 'summoning circle', '2', '3', '3', 'townhouse', '22', 'built in 1993', '750000');
+INSERT INTO EVALUATION VALUES(
+'7016', '2002', '1001', '6023', '900', '1000', 'water damage', 'deck', '2', '1', '2', 'rental', '60', 'built in 1955', '600000');
+INSERT INTO EVALUATION VALUES(
+'7017', '2003', '1002', '6024', '1100', '1100', 'leaking faucet', 'sunroof and balcony', '3', '2', '2', 'house', '14', 'built in 2001', '360000');
+INSERT INTO EVALUATION VALUES(
+'7018', '2001', '1001', '6026', '2000', '1000', 'no repairs needed', 'patio', '1', '1', '1', 'townhouse', '1', 'built in 2014', '10000000');
+INSERT INTO EVALUATION VALUES(
+'7019', '2002', '1002', '6027', '600', '500', 'broken tile flooring', 'fenced yard', '2', '2', '2', 'rental', '15', 'built in 2000', '900000');
+INSERT INTO EVALUATION VALUES(
+'7020', '2003', '1001', '6029', '800', '800', 'broken windows', 'garage', '6', '6', '4', 'commercial', '120', 'built in 1895', '30000');
