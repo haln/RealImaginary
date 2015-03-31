@@ -68,6 +68,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     protected void signup_Click(object sender, EventArgs e)
     {
-        
+        Response.Redirect("SignUp.aspx");
     }
+
 }
