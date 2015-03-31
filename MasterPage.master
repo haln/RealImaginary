@@ -70,75 +70,75 @@
                 <br/>
                 </div>
                 <div id="filter">
-            <label for="budgetMin"">Min</label>
-            <select id="budgetMin" runat="server" name="budgetMin" class="singleSelect">
-                <option value="0">$0</option>
-                <option value="50000">$50,000</option>
-                <option value="100000">$100,000</option>
-                <option value="200000">$200,000</option>
-                <option value="500000">$500,000</option>
-                <option value="1000000">$1,000,000</option>
-                <option value="10000000">$10,000,000</option>
-                <option value="0">Unlimited</option>
-            </select>
-            <label for="budgetMax">Max</label>
-            <select id="budgetMax" runat="server" name="budgetMax" class="singleSelect">
-                <option value="50000">$50,000</option>
-                <option value="100000">$100,000</option>
-                <option value="200000">$200,000</option>
-                <option value="500000">$500,000</option>
-                <option value="1000000">$1,000,000</option>
-                <option value="10000000">$10,000,000</option>
-                <option value="9999999999">Unlimited</option>
-            </select>
-            <label for="city">City</label>
-            <select id="city" runat="server" name="city" class="singleSelect">
-                <option value="Vancouver">Vancouver</option>
-                <option value="Richmond">Richmond</option>
-                <option value="Burnaby">Burnaby</option>
-                <option value="New Westminister">New Westminister</option>
-                <option value="Surrey">Surrey</option>
-                <option value="Delta">Delta</option>
-                <option value="Langley">Langley</option>
-                <option value="Abbotsford">Abbotsford</option>
-            </select>
-            <label for="bedrooms">Bedrooms</label>
-            <select id="bedrooms" runat="server" name="bedrooms" class="singleSelect">
-                <option value="1">1+</option>
-                <option value="2">2+</option>
-                <option value="3">3+</option>
-                <option value="4">4+</option>
-                <option value="5">5+</option>
-            </select>
-            <label for="bathrooms">Bathrooms</label>
-            <select id="bathrooms" runat="server" name="bathrooms" class="singleSelect" visible="True">
-                <option value="1">1+</option>
-                <option value="2">2+</option>
-                <option value="3">3+</option>
-                <option value="4">4+</option>
-                <option value="5">5+</option>
-            </select>
-            <label for="squareFootage">Sq. Ft.</label>
-            <select id="squareFootage" runat="server" name="squareFootage" class="singleSelect">
-                <option value="0">Any</option>
-                <option value="50">50ft+</option>
-                <option value="100">100ft+</option>
-                <option value="200">200ft+</option>
-                <option value="500">500ft+</option>
-                <option value="1000">1000ft+</option>
-                <option value="2000">2000ft+</option>
-                <option value="5000">5000ft+</option>
-                <option value="10000">10000ft+</option>
-            </select>
-                    <label for="propertyType">Types</label>
-            <select title="Property Type" runat="server" id="propertyType" multiple="true" name="propertyType" class="multipleSelect">
-                <option value="condo">Condominium</option>
-                <option value="townhouse">Townhouse</option>
-                <option value="house">House</option>
-                <option value="rental">Lease/Rental</option>
-                <option value="farm">Farmland</option>
-                <option value="commercial">Commercial</option>
-            </select>
+                    <label for="budgetMin"">Min</label>
+                    <select id="budgetMin" runat="server" name="budgetMin" class="singleSelect">
+                        <option value="0">$0</option>
+                        <option value="50000">$50,000</option>
+                        <option value="100000">$100,000</option>
+                        <option value="200000">$200,000</option>
+                        <option value="500000">$500,000</option>
+                        <option value="1000000">$1,000,000</option>
+                        <option value="10000000">$10,000,000</option>
+                        <option value="0">Unlimited</option>
+                    </select>
+                    <label for="budgetMax">Max</label>
+                    <select id="budgetMax" runat="server" name="budgetMax" class="singleSelect">
+                        <option value="50000">$50,000</option>
+                        <option value="100000">$100,000</option>
+                        <option value="200000">$200,000</option>
+                        <option value="500000">$500,000</option>
+                        <option value="1000000">$1,000,000</option>
+                        <option value="10000000">$10,000,000</option>
+                        <option value="9999999999">Unlimited</option>
+                    </select>
+                    <label for="city">City</label>
+                    <select id="city" runat="server" name="city" class="singleSelect">
+                        <option value="Vancouver">Vancouver</option>
+                        <option value="Richmond">Richmond</option>
+                        <option value="Burnaby">Burnaby</option>
+                        <option value="New Westminister">New Westminister</option>
+                        <option value="Surrey">Surrey</option>
+                        <option value="Delta">Delta</option>
+                        <option value="Langley">Langley</option>
+                        <option value="Abbotsford">Abbotsford</option>
+                    </select>
+                    <label for="bedrooms">Bedrooms</label>
+                    <select id="bedrooms" runat="server" name="bedrooms" class="singleSelect">
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                    <label for="bathrooms">Bathrooms</label>
+                    <select id="bathrooms" runat="server" name="bathrooms" class="singleSelect" visible="True">
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5+</option>
+                    </select>
+                    <label for="squareFootage">Sq. Ft.</label>
+                    <select id="squareFootage" runat="server" name="squareFootage" class="singleSelect">
+                        <option value="0">Any</option>
+                        <option value="50">50ft+</option>
+                        <option value="100">100ft+</option>
+                        <option value="200">200ft+</option>
+                        <option value="500">500ft+</option>
+                        <option value="1000">1000ft+</option>
+                        <option value="2000">2000ft+</option>
+                        <option value="5000">5000ft+</option>
+                        <option value="10000">10000ft+</option>
+                    </select>
+                            <label for="propertyType">Types</label>
+                    <select title="Property Type" runat="server" id="propertyType" multiple="true" name="propertyType" class="multipleSelect">
+                        <option value="condo">Condominium</option>
+                        <option value="townhouse">Townhouse</option>
+                        <option value="house">House</option>
+                        <option value="rental">Lease/Rental</option>
+                        <option value="farm">Farmland</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
                 </div>
 
             <br /></div>
