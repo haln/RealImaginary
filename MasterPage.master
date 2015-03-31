@@ -26,15 +26,27 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server" action="Results.aspx">
+    <form id="form1" runat="server">
         <div id="container">
             <header>
                 <div class="sign">
                     <div class="inputsign">
-                        <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None" />
-                        <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" />
-                        <asp:TextBox ID="password" runat="server" Text="Password" CssClass="userPw" ForeColor="Silver" TextMode="Password"></asp:TextBox>
-                        <asp:TextBox ID="username" runat="server" Text="UserName" CssClass="userName" BorderStyle="Inset" ForeColor="Silver"></asp:TextBox>
+                        <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signup_Click" />
+                        <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="signin_Click" />                       
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [ACCOUNT] WHERE (([ACC_USER] = @ACC_USER) AND ([ACC_PASS] = @ACC_PASS))">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="username" Name="ACC_USER" PropertyName="Text" Type="String" />
+                                <asp:ControlParameter ControlID="password" Name="ACC_PASS" PropertyName="Text" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource> 
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="password"></asp:Label>
+                        <asp:TextBox ID="password" runat="server"  CssClass="userPw" ForeColor="Silver" TextMode="Password"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="*" ToolTip="*" ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName"></asp:Label>
+                        <asp:TextBox ID="username" runat="server"  CssClass="userName" BorderStyle="Inset" ForeColor="Silver"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="*" ToolTip="*" ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
+                         
                     </div>
                 </div>
                 <div class="mask"></div>
@@ -118,7 +130,7 @@
                 <option value="5000">5000ft+</option>
                 <option value="10000">10000ft+</option>
             </select>
-            <label for="propertyType">Property Types</label>
+                    <label for="propertyType">Types</label>
             <select title="Property Type" runat="server" id="propertyType" multiple="true" name="propertyType" class="multipleSelect">
                 <option value="condo">Condominium</option>
                 <option value="townhouse">Townhouse</option>
