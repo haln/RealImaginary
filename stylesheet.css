@@ -1,5 +1,23 @@
 ﻿body { font-family:Verdana; font-size:12px; margin:0 auto; background-color:#ececec;}
 #container {margin: 0 auto; min-height:100%;height:auto !important;height:100%; position:relative; }
+#agentMain h1 {
+    width:200px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#agentMain {
+    width:635px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#agentList {
+
+        margin-right: auto;
+    margin-left: auto;
+
+}
 #adminHeader {
     width:500px;
     margin-right: auto;
