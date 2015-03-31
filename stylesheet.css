@@ -261,23 +261,13 @@ footer {
     width: 86px;
 }
 
-<<<<<<< HEAD
-#filter{
-    position:relative;
-    margin-top:25px;
-    margin-left:auto;
-    margin-right:auto;
-      width: 96%;
-    top: 0px;
-    left: 4px;
-=======
+
 #filter {
     position: relative;
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
->>>>>>> origin/master
 }
 
 #propertyType {
