@@ -61,7 +61,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
             username.Visible = false;
             password.Visible = false;
             Label1.Text = "Welcome, " + username.Text;
-            Response.Redirect("admin-agents.aspx");
+            Response.Redirect("admin-listing.aspx");
             
             
         }
