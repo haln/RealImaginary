@@ -25,10 +25,10 @@
                 <asp:Label ID="AGENT_ADDRESSLabel" runat="server" Text='<%# Eval("AGENT_ADDRESS") %>' />--%>
                 <br />
                 PHONE:
-                <asp:Label ID="AGENT_PHONELabel" runat="server" Text='<%# Eval("AGENT_PHONE") %>' />
+                <asp:Label ID="AGENT_PHONELabel" runat="server" Text='<%# Eval("AGENT_PHONE") %>' ForeColor="White" />
                 <br />
                 EMAIL:
-                <asp:Label ID="AGENT_EMAILLabel" runat="server" Text='<%# Eval("AGENT_EMAIL") %>' />
+                <asp:Label ID="AGENT_EMAILLabel" runat="server" Text='<%# Eval("AGENT_EMAIL") %>' ForeColor="White" />
                 <br />
 <br />
             </ItemTemplate>

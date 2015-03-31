@@ -7,7 +7,7 @@
 
 }
 #agentMain {
-    width:635px;
+    width:750px;
     margin-right: auto;
     margin-left: auto;
 
@@ -110,6 +110,15 @@ header {
     float:right;
     margin-left:24px;
     margin-right:24px;
+}
+.signout {
+    background-color:#14afa7;
+    width:106px;
+    height:30px;
+    float:right;
+    margin-left:24px;
+    margin-right:24px;
+
 }
 
 .userName {
