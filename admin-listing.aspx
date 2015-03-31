@@ -14,10 +14,7 @@
             <header>
                 <div class="sign">
                     <div class="inputsign">
-                        <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None" />
-                        <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" />
-                        <asp:TextBox ID="password" runat="server" Text="Password" CssClass="userPw" ForeColor="Silver" TextMode="Password"></asp:TextBox>
-                        <asp:TextBox ID="username" runat="server" Text="UserName" CssClass="userName" BorderStyle="Inset" ForeColor="Silver"></asp:TextBox>
+                        <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click1" />
                     </div>
                 </div>
                 <div class="mask"></div>
