@@ -9,7 +9,7 @@ public partial class admin_listing : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+
         String auth = (String)Session["AccountType"];
         if (auth != "admin")
         {
@@ -23,11 +23,11 @@ public partial class admin_listing : System.Web.UI.Page
         }
     }
     protected void signout_Click1(object sender, EventArgs e)
-{
+    {
         Session["UserName"] = null;
         Session["AccountType"] = null;
 
         Response.Redirect("default.aspx");
-}
+    }
 }
 
