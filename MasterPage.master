@@ -26,7 +26,7 @@
     </script>
 </head>
 <body>
-    <form id="form1" runat="server" action="Results.aspx">
+    <form id="form1" runat="server">
         <div id="container">
             <header>
                 <div class="sign">
@@ -65,7 +65,7 @@
             </header>
             <div id="searchbox">
                 <div id="search">      
-                     <span><input id="searchBar" type="text" placeholder="Enter an address" /><input id="searchSubmit" runat="server" value="Search" type="submit"/></span>   
+                     <span><asp:TextBox runat="server" ID="searchBar" placeholder="Enter an address"></asp:TextBox><asp:Button ID="searchSubmit" runat="server" Text="Search" OnClick="Button1_Click" /></span>   
                 <br/>
                 </div>
                 <div id="filter">
