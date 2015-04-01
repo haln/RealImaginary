@@ -21,17 +21,18 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         }
         //If it's not the first page, grab filter settings and set them appropriately
-        if (HttpContext.Current.Request["ctl00$budgetMin"] != null)
+        if (Session["results"] != null)
         {
-            budgetMin.Items.FindByValue(HttpContext.Current.Request["ctl00$budgetMin"]).Selected = true;
-            budgetMax.Items.FindByValue(HttpContext.Current.Request["ctl00$budgetMax"]).Selected = true;
-            city.Items.FindByValue(HttpContext.Current.Request["ctl00$city"]).Selected = true;
-            bedrooms.Items.FindByValue(HttpContext.Current.Request["ctl00$bedrooms"]).Selected = true;
-            bathrooms.Items.FindByValue(HttpContext.Current.Request["ctl00$bathrooms"]).Selected = true;
-            squareFootage.Items.FindByValue(HttpContext.Current.Request["ctl00$squareFootage"]).Selected = true;
-            if (HttpContext.Current.Request["ctl00$propertyType"] != null)
+            searchBar.Text = ((Result)Session["results"]).searchStr;
+            budgetMin.Items.FindByValue(((Result)Session["results"]).budgetMin).Selected = true;
+            budgetMax.Items.FindByValue(((Result)Session["results"]).budgetMax).Selected = true;
+            city.Items.FindByValue(((Result)Session["results"]).city).Selected = true;
+            bedrooms.Items.FindByValue(((Result)Session["results"]).bedrooms).Selected = true;
+            bathrooms.Items.FindByValue(((Result)Session["results"]).bathrooms).Selected = true;
+            squareFootage.Items.FindByValue(((Result)Session["results"]).sqft).Selected = true;
+            if (((Result)Session["results"]).ptype != null)
             {
-                String[] propType = HttpContext.Current.Request["ctl00$propertyType"].ToString().Split(',');
+                String[] propType = ((Result)Session["results"]).ptype.ToString().Split(',');
                 for (int i = 0; i < propType.Length; i++)
                 {
                     propertyType.Items.FindByValue(propType[i]).Selected = true;
@@ -68,6 +69,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     protected void signup_Click(object sender, EventArgs e)
     {
-        
+        Response.Redirect("SignUp.aspx");
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        System.Web.HttpRequest req = HttpContext.Current.Request;
+        Session["results"] = new Result(req["ctl00$searchBar"],req["ctl00$budgetMin"], req["ctl00$budgetMax"], req["ctl00$city"],
+            req["ctl00$bedrooms"], req["ctl00$bathrooms"], req["ctl00$squareFootage"], req["ctl00$propertyType"]);
+        Response.Redirect("Results.aspx");
     }
 }

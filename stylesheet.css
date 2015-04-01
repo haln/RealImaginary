@@ -123,6 +123,11 @@ header {
     padding: 2px;
 }
 
+#Label1 {
+    float:right;
+    margin-right:20px;
+}
+
 
 .menu {
     width: 370px;
@@ -256,6 +261,7 @@ footer {
     width: 86px;
 }
 
+
 #filter {
     position: relative;
     margin-top: 25px;
@@ -382,4 +388,10 @@ footer {
     width: 35%;
     height: auto;
     margin-top: 15px;
+}
+
+.signUpk {
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
 }

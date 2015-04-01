@@ -14,7 +14,7 @@
             <header>
                 <div class="sign">
                     <div class="inputsign">
-                        <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click" />
+                        <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click1" />
                     </div>
                 </div>
                 <div class="mask"></div>

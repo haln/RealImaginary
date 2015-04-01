@@ -64,11 +64,4 @@ public partial class admin : System.Web.UI.Page
         }
     }
 
-    protected void signout_Click(object sender, EventArgs e)
-    {
-        Session["UserName"] = null;
-        Session["userType"] = null;
-
-        Response.Redirect("default.aspx");
-    }
 }
