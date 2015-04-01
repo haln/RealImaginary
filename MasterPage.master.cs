@@ -61,20 +61,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 DataRowView thing = accountTable[0];
                 Session["AccountType"] = thing[3];
                 string accountType = Session["AccountType"] as string;
-                switch (accountType)
-            {
-            case "agent":
-                Response.Redirect("admin-listing.aspx");
-                break;
-            case "admin":
-                Response.Redirect("admin-listing.aspx");
-                break;
-            case "customer":
-                Response.Redirect("Default.aspx");
-                break;
-            default:
-                return;
-            }
+
+
+                Response.Redirect(Request.RawUrl);
+
             }
         }
     }
@@ -86,7 +76,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void Button1_Click(object sender, EventArgs e)
     {
         System.Web.HttpRequest req = HttpContext.Current.Request;
-        Session["results"] = new Result(req["ctl00$searchBar"],req["ctl00$budgetMin"], req["ctl00$budgetMax"], req["ctl00$city"],
+        Session["results"] = new Result(req["ctl00$searchBar"], req["ctl00$budgetMin"], req["ctl00$budgetMax"], req["ctl00$city"],
             req["ctl00$bedrooms"], req["ctl00$bathrooms"], req["ctl00$squareFootage"], req["ctl00$propertyType"]);
         Response.Redirect("Results.aspx");
     }
@@ -108,13 +98,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 return;
 
         }
-       
+
     }
     protected void signout_Click(object sender, EventArgs e)
     {
         Session["UserName"] = null;
         Session["AccountType"] = null;
 
-        Response.Redirect("default.aspx");
+        Response.Redirect(Request.RawUrl);
     }
 }
