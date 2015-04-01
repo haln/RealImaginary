@@ -7,13 +7,7 @@
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Real Imaginary - The Real Estate Agency</title>
     <style type="text/css">
-        .auto-style1 {
-            width: 128px;
-        }
 
-        #adminNevigation {
-            width: 360px;
-        }
     </style>
 </head>
 
