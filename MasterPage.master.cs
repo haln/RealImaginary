@@ -18,6 +18,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
             username.Visible = false;
             password.Visible = false;
             Label1.Text = "Welcome, " + Session["username"];
+            signout.Visible = true;
+            manage.Visible = true;
 
         }
         //If it's not the first page, grab filter settings and set them appropriately
@@ -47,24 +49,33 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
         SqlDataSource1.DataBind();
         accountTable = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
-
-        if (accountTable.Count == 0)
+        if (accountTable != null)
         {
-            Response.Write("<script>alert('Login failed!')</script>"); 
-        }
-        if (accountTable.Count == 1)
-        {
-            Session["UserName"] = username.Text;
-            DataRowView thing = accountTable[0];
-            Session["AccountType"] = thing[3];
-            signin.Visible = false;
-            signup.Visible = false;
-            username.Visible = false;
-            password.Visible = false;
-            Label1.Text = "Welcome, " + username.Text;
-            Response.Redirect("admin-listing.aspx");
-            
-            
+            if (accountTable.Count == 0)
+            {
+                Response.Write("<script>alert('Login failed!')</script>");
+            }
+            if (accountTable.Count == 1)
+            {
+                Session["UserName"] = username.Text;
+                DataRowView thing = accountTable[0];
+                Session["AccountType"] = thing[3];
+                string accountType = Session["AccountType"] as string;
+                switch (accountType)
+            {
+            case "agent":
+                Response.Redirect("admin-listing.aspx");
+                break;
+            case "admin":
+                Response.Redirect("admin-listing.aspx");
+                break;
+            case "customer":
+                Response.Redirect("Default.aspx");
+                break;
+            default:
+                return;
+            }
+            }
         }
     }
     protected void signup_Click(object sender, EventArgs e)
@@ -78,5 +89,32 @@ public partial class MasterPage : System.Web.UI.MasterPage
         Session["results"] = new Result(req["ctl00$searchBar"],req["ctl00$budgetMin"], req["ctl00$budgetMax"], req["ctl00$city"],
             req["ctl00$bedrooms"], req["ctl00$bathrooms"], req["ctl00$squareFootage"], req["ctl00$propertyType"]);
         Response.Redirect("Results.aspx");
+    }
+    protected void manage_Click(object sender, EventArgs e)
+    {
+        string accountType = Session["AccountType"] as string;
+        switch (accountType)
+        {
+            case "agent":
+                Response.Redirect("admin-listing.aspx");
+                break;
+            case "admin":
+                Response.Redirect("admin-agents.aspx");
+                break;
+            case "customer":
+                Response.Write("<script>alert('The management page for user profile is still in construction ^_^ ')</script>");
+                break;
+            default:
+                return;
+
+        }
+       
+    }
+    protected void signout_Click(object sender, EventArgs e)
+    {
+        Session["UserName"] = null;
+        Session["AccountType"] = null;
+
+        Response.Redirect("default.aspx");
     }
 }

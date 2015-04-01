@@ -23,7 +23,6 @@ public partial class SignUp : System.Web.UI.Page
 
         
         accTable = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
-        Response.Write("<script>alert(accTable.Count)</script>");
         string userName = this.UserName.Text;
         string passWord = this.Password.Text;
         string type = "customer";

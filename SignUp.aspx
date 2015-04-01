@@ -21,7 +21,7 @@
                     <asp:TextBox ID="Password" runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Password"
-                        ErrorMessage="Password is a required field." Display="Dynamic" ValidationGroup="signup">
+                        TextMode="Password" ErrorMessage="Password is a required field." Display="Dynamic" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
@@ -32,7 +32,7 @@
                         runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ConfirmPassword"
-                        TextMode="Password" ErrorMessage="Confirm Password is a required field." Display="Dynamic" ValidationGroup="signup">
+                         ErrorMessage="Confirm Password is a required field." Display="Dynamic" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>

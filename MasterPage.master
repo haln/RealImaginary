@@ -33,14 +33,16 @@
                     <div class="sign">
                         <div class="inputsign">
                             <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signup_Click" />
-                            <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="signin_Click" />                       
+                            <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="signin_Click" />
+                            <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click" Visible="False" />
+                            <asp:Button ID="manage" runat="server" Text="Manage" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="manage_Click" Visible="False" />                       
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [ACCOUNT] WHERE (([ACC_USER] = @ACC_USER) AND ([ACC_PASS] = @ACC_PASS))" >
                                 <SelectParameters>
                                     <asp:ControlParameter ControlID="username" Name="ACC_USER" PropertyName="Text" Type="String" />
                                     <asp:ControlParameter ControlID="password" Name="ACC_PASS" PropertyName="Text" Type="String" />
                                 </SelectParameters>
                             </asp:SqlDataSource> 
-                            <asp:Label ID="Label1" runat="server"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="White"></asp:Label>
                         
                             <asp:TextBox ID="password" runat="server"  CssClass="userPw" ForeColor="Silver" TextMode="Password" placeholder="password"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="*" ToolTip="*" ValidationGroup="ctl00$Login1">*</asp:RequiredFieldValidator>
@@ -69,7 +71,7 @@
                 <div id="searchbox">
                     <div id="search">      
                          <span>
-                             <asp:TextBox runat="server" ID="searchBar" placeholder="Enter an address" ></asp:TextBox>
+                             <asp:TextBox runat="server" ID="searchBar" placeholder="Enter an address" Width="463px" ></asp:TextBox>
                              <asp:Button ID="searchSubmit" runat="server" Text="Search" OnClick="Button1_Click" />
                          </span>   
                     <br/>
