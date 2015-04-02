@@ -200,9 +200,7 @@
                         <td class="auto-style1">
                             <asp:TextBox ID="tbSelling" runat="server"></asp:TextBox></td>
                         <td class="auto-style1">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbSelling"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbSelling" EnableViewState="False" ErrorMessage="number only" ValidationExpression="^[0-9]*$" ValidationGroup="add"></asp:RegularExpressionValidator>
-                         </td>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbSelling"></asp:RequiredFieldValidator></td>
                     </tr>
                     <tr>
                         <td>
