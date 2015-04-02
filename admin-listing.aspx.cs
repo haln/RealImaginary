@@ -9,22 +9,38 @@ public partial class admin_listing : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["username"] != null)
+        {
+            signin.Visible = false;
+            signup.Visible = false;
+            username.Visible = false;
+            password.Visible = false;
+            Label1.Text = "Welcome, " + Session["username"];
+            signout.Visible = true;
+            manage.Visible = false;
 
-        String auth = (String)Session["AccountType"];
-        if (auth != "admin")
-        {
-            btnAgentsManage.Visible = false;
-            btnListingManage.Visible = false;
         }
-        else if (auth == "admin")
-        {
-            btnAgentsManage.Visible = true;
-            btnListingManage.Visible = true;
-        }
-        
 
     }
-    protected void signout_Click1(object sender, EventArgs e)
+
+
+    protected void btnAddAgent_Click(object sender, EventArgs e)
+    {
+      
+    }
+    protected void signup_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void signin_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void manage_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void signout_Click(object sender, EventArgs e)
     {
         Session["UserName"] = null;
         Session["AccountType"] = null;

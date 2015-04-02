@@ -35,8 +35,11 @@
                 <br />
 <br />
             </ItemTemplate>
-            <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-            <SeparatorStyle BackColor="#FF66FF" />
+            <SelectedItemStyle BackColor="#ececec" Font-Bold="True" ForeColor="White" />
+            <SeparatorStyle BackColor="white" />
+            <SeparatorTemplate>
+                <br />
+            </SeparatorTemplate>
         </asp:DataList>
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT] ORDER BY [AGENCY_ID]"></asp:SqlDataSource>

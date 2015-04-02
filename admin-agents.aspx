@@ -16,11 +16,26 @@
     <form id="form1" runat="server">
         <div id="container">
             <header>
-                <div class="sign">
-                    <div class="inputsign">
-                        <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click" />
+                <asp:Panel ID="Panel1" runat="server" DefaultButton="signin">
+                    <div class="sign">
+                        <div class="inputsign">
+                            <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signup_Click" />
+                            <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="signin_Click" />
+                            <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click" Visible="False" />
+                            <asp:Button ID="manage" runat="server" Text="Manage" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="manage_Click" Visible="False" />
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [ACCOUNT] WHERE (([ACC_USER] = @ACC_USER) AND ([ACC_PASS] = @ACC_PASS))" >
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="username" Name="ACC_USER" PropertyName="Text" Type="String" />
+                                    <asp:ControlParameter ControlID="password" Name="ACC_PASS" PropertyName="Text" Type="String" />
+                                </SelectParameters>
+                            </asp:SqlDataSource> 
+                            <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="White"></asp:Label>
+                            <asp:TextBox ID="password" runat="server"  CssClass="userPw" ForeColor="Silver" TextMode="Password" placeholder="password"></asp:TextBox>
+                            <asp:TextBox ID="username" runat="server"  CssClass="userName" BorderStyle="Inset" ForeColor="Silver" placeholder="username"></asp:TextBox>
+                         
+                        </div>
                     </div>
-                </div>
+                </asp:Panel>
                 <div class="mask"></div>
                 <div class="banner-background">
                     <div class="line"></div>
@@ -37,8 +52,8 @@
             <div id="admin">
                 <h1>Agents management</h1>
                 <div id="adminNavigation">
-                    <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="False" BackColor="#1472DC" ForeColor="White" Height="36px" BorderStyle="None"/>
-                    <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="true" PostBackUrl="~/admin-listing.aspx" BackColor="#ECAB1C" ForeColor="White" Height="36px" BorderStyle="None"/>
+                    <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="False" BackColor="#1472DC" ForeColor="White" Height="36px" BorderStyle="None" />
+                    <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="true" PostBackUrl="~/admin-listing.aspx" BackColor="#ECAB1C" ForeColor="White" Height="36px" BorderStyle="None" />
                 </div>
                 <br />
                 <div id="agentTable">
@@ -104,12 +119,12 @@
                         </UpdateParameters>
                     </asp:SqlDataSource>
                     <br />
-                     <div id="addAgent" style="padding: 15px; background-color: #FFFFFF;">
+                    <div id="addAgent" style="padding: 15px; background-color: #FFFFFF;">
                         <h2>Add an agent below:</h2>
                         <asp:Label ID="lblError" runat="server" EnableViewState="False"></asp:Label>
                         <br />
                         <table>
-                            
+
                             <tr>
                                 <td>Agency</td>
                                 <td class="auto-style1">
@@ -117,8 +132,7 @@
                                     </asp:DropDownList>
                                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [AGENCY_ID], [AGENCY_ADDRESS] FROM [AGENCY]"></asp:SqlDataSource>
                                 </td>
-                                <td>
-                                    &nbsp;</td>
+                                <td>&nbsp;</td>
                             </tr>
                             <tr>
                                 <td>Last Name</td>
@@ -166,6 +180,7 @@
                     <p>Created by Real Imaginary</p>
                 </footer>
             </div>
+        </div>
     </form>
 </body>
 </html>

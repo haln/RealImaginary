@@ -6,17 +6,37 @@
 <head id="Head1" runat="server">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Real Imaginary - The Real Estate Agency</title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 53px;
+        }
+    </style>
 </head>
 
 <body>
     <form id="form1" runat="server">
         <div id="container">
             <header>
-                <div class="sign">
-                    <div class="inputsign">
-                        <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click1" />
+                <asp:Panel ID="Panel1" runat="server" DefaultButton="signin">
+                    <div class="sign">
+                        <div class="inputsign">
+                            <asp:Button ID="signup" runat="server" Text="Sign Up" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signup_Click" />
+                            <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="signin_Click" />
+                            <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click" Visible="False" />
+                            <asp:Button ID="manage" runat="server" Text="Manage" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="manage_Click" Visible="False" />
+                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [ACCOUNT] WHERE (([ACC_USER] = @ACC_USER) AND ([ACC_PASS] = @ACC_PASS))" >
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="username" Name="ACC_USER" PropertyName="Text" Type="String" />
+                                    <asp:ControlParameter ControlID="password" Name="ACC_PASS" PropertyName="Text" Type="String" />
+                                </SelectParameters>
+                            </asp:SqlDataSource> 
+                            <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="White"></asp:Label>
+                            <asp:TextBox ID="password" runat="server"  CssClass="userPw" ForeColor="Silver" TextMode="Password" placeholder="password"></asp:TextBox>
+                            <asp:TextBox ID="username" runat="server"  CssClass="userName" BorderStyle="Inset" ForeColor="Silver" placeholder="username"></asp:TextBox>
+                         
+                        </div>
                     </div>
-                </div>
+                </asp:Panel>
                 <div class="mask"></div>
                 <div class="banner-background">
                     <div class="line"></div>
@@ -31,9 +51,9 @@
                 </div>
             </header>
             <div id="adminHeader">
-                <h1>Listing management</h1>
-                <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="true" PostBackUrl="~/admin-agents.aspx" BackColor="#1472DC" ForeColor="White" Height="36px" BorderStyle="None"/>
-                <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="false" BackColor="#ECAB1C" ForeColor="White" Height="36px" BorderStyle="None"/>
+                <h3>Listing management</h3>
+                <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="true" PostBackUrl="~/admin-agents.aspx" BackColor="#1472DC" ForeColor="White" Height="36px" BorderStyle="None" />
+                <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="false" BackColor="#ECAB1C" ForeColor="White" Height="36px" BorderStyle="None" />
                 <br />
             </div>
 
@@ -83,12 +103,88 @@
                     </UpdateParameters>
                 </asp:SqlDataSource>
             </div>
-            <div id="addListing">
-                
+
+            <div id="addListing" style="padding: 15px; background-color: #FFFFFF;">
+                <h2>Add a property below:</h2>
+                <asp:Label ID="lblError" runat="server" EnableViewState="False"></asp:Label>
+                <br />
+                <table>
+
+                    
+                    <tr>
+                        <td>Buyer:</td>
+                        <td class="auto-style1">
+                            <asp:DropDownList ID="buyerDrop" runat="server" DataSourceID="SqlDataSource2" DataTextField="BUYER_LNAME" DataValueField="BUYER_ID">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [BUYER_ID], [BUYER_LNAME], [BUYER_FNAME] FROM [BUYER] ORDER BY [BUYER_LNAME]"></asp:SqlDataSource>
+                        </td>
+                        <td class="auto-style1">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Seller:</td>
+                        <td class="auto-style1">
+                            <asp:DropDownList ID="sellerDrop" runat="server" DataSourceID="SqlDataSource3" DataTextField="SELLER_LNAME" DataValueField="SELLER_ID">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [SELLER_ID], [SELLER_LNAME], [SELLER_FNAME] FROM [SELLER]"></asp:SqlDataSource>
+                        </td>
+                        <td class="auto-style1">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Agent:</td>
+                        <td class="auto-style1">
+                            <asp:DropDownList ID="agentDrop" runat="server" DataSourceID="SqlDataSource4" DataTextField="AGENT_LNAME" DataValueField="AGENT_ID">
+                            </asp:DropDownList>
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [AGENT_ID], [AGENT_LNAME], [AGENT_FNAME] FROM [AGENT]"></asp:SqlDataSource>
+                        </td>
+                        <td class="auto-style1">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td class="auto-style1">
+                            <asp:TextBox ID="tbAddress" runat="server"></asp:TextBox></td>
+                        <td class="auto-style1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbAddress"></asp:RequiredFieldValidator></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td class="auto-style1">
+                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" RepeatDirection="Horizontal">
+                                <asp:ListItem>unsold</asp:ListItem>
+                                <asp:ListItem>sold</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </td>
+                        <td class="auto-style1">
+                            &nbsp;</td>
+                    </tr>
+                     <tr>
+                        <td>Asking price:</td>
+                        <td class="auto-style1">
+                            <asp:TextBox ID="tbAsking" runat="server"></asp:TextBox></td>
+                        <td class="auto-style1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbAsking"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbAsking" EnableViewState="False" ErrorMessage="number only" ValidationExpression="^[0-9]*$" ValidationGroup="add"></asp:RegularExpressionValidator>
+                         </td>
+                    </tr>
+                     <tr>
+                        <td>Selling price:</td>
+                        <td class="auto-style1">
+                            <asp:TextBox ID="tbSelling" runat="server"></asp:TextBox></td>
+                        <td class="auto-style1">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbSelling"></asp:RequiredFieldValidator></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btnAddProperty" runat="server" Text="Add new property" ValidationGroup="add" OnClick="btnAddAgent_Click" /></td>
+                    </tr>
+                </table>
+
             </div>
-            <footer>
-                <p>Created by Real Imaginary</p>
-            </footer>
+        <footer>
+            <p>Created by Real Imaginary</p>
+        </footer>
         </div>
     </form>
 </body>

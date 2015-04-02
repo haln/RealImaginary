@@ -163,7 +163,9 @@ header {
     margin-left: 24px;
     margin-right: 24px;
 }
-
+.lblWelcome {
+    float: right;
+}
 .userName {
     width: 200px;
     height: 24px;
