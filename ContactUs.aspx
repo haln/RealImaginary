@@ -6,10 +6,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">   
     <div id="agentMain">
         <h1>Our agents</h1>
-        <asp:DataList ID="agentList" runat="server" BackColor="#ecab1c" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyField="AGENT_ID" DataSourceID="SqlDataSource1" GridLines="Both" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" RepeatColumns="3">
+        <asp:DataList ID="agentList" runat="server" BackColor="#ECAB1C" BorderColor="White" BorderStyle="None" BorderWidth="0px" CellPadding="3" DataKeyField="AGENT_ID" DataSourceID="SqlDataSource1" GridLines="Both" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" RepeatColumns="3" HorizontalAlign="Center">
             <FooterStyle BackColor="White" ForeColor="#000066" />
             <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-            <ItemStyle ForeColor="#000066" />
+            <ItemStyle ForeColor="#000066" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
             <ItemTemplate>
                 <%--AGENT_ID:
                 <asp:Label ID="AGENT_IDLabel" runat="server" Text='<%# Eval("AGENT_ID") %>' />
