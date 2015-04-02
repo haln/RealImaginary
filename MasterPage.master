@@ -98,6 +98,7 @@
                         </select>
                         <label for="city">City</label>
                         <select id="city" runat="server" name="city" class="singleSelect">
+                            <option value="">Any</option>
                             <option value="Vancouver">Vancouver</option>
                             <option value="Richmond">Richmond</option>
                             <option value="Burnaby">Burnaby</option>
