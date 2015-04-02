@@ -27,7 +27,7 @@ public partial class SignUp : System.Web.UI.Page
         string passWord = this.Password.Text;
         string type = "customer";
         int accId = accTable.Count + 1;
-        string linkId = "5";
+        string linkId = "5001";
 
         if (accountTable.Count == 0)
         {

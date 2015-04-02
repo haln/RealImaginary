@@ -102,6 +102,33 @@
                         <asp:Parameter Name="HOUSE_ID" Type="String" />
                     </UpdateParameters>
                 </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [HOUSE]" DeleteCommand="DELETE FROM [HOUSE] WHERE [HOUSE_ID] = @HOUSE_ID" InsertCommand="INSERT INTO [HOUSE] ([HOUSE_ID], [BUYER_ID], [SELLER_ID], [AGENT_ID], [HOUSE_ADDRESS], [HOUSE_STATE], [HOUSE_ASKINGPRICE], [HOUSE_SELLINGPRICE], [HOUSE_PICTURE]) VALUES (@HOUSE_ID, @BUYER_ID, @SELLER_ID, @AGENT_ID, @HOUSE_ADDRESS, @HOUSE_STATE, @HOUSE_ASKINGPRICE, @HOUSE_SELLINGPRICE, @HOUSE_PICTURE)" UpdateCommand="UPDATE [HOUSE] SET [BUYER_ID] = @BUYER_ID, [SELLER_ID] = @SELLER_ID, [AGENT_ID] = @AGENT_ID, [HOUSE_ADDRESS] = @HOUSE_ADDRESS, [HOUSE_STATE] = @HOUSE_STATE, [HOUSE_ASKINGPRICE] = @HOUSE_ASKINGPRICE, [HOUSE_SELLINGPRICE] = @HOUSE_SELLINGPRICE, [HOUSE_PICTURE] = @HOUSE_PICTURE WHERE [HOUSE_ID] = @HOUSE_ID">
+                    <DeleteParameters>
+                        <asp:Parameter Name="HOUSE_ID" Type="String" />
+                    </DeleteParameters>
+                    <InsertParameters>
+                        <asp:Parameter Name="HOUSE_ID" Type="String" />
+                        <asp:Parameter Name="BUYER_ID" Type="String" />
+                        <asp:Parameter Name="SELLER_ID" Type="String" />
+                        <asp:Parameter Name="AGENT_ID" Type="String" />
+                        <asp:Parameter Name="HOUSE_ADDRESS" Type="String" />
+                        <asp:Parameter Name="HOUSE_STATE" Type="String" />
+                        <asp:Parameter Name="HOUSE_ASKINGPRICE" Type="Double" />
+                        <asp:Parameter Name="HOUSE_SELLINGPRICE" Type="Double" />
+                        <asp:Parameter Name="HOUSE_PICTURE" Type="String" />
+                    </InsertParameters>
+                    <UpdateParameters>
+                        <asp:Parameter Name="BUYER_ID" Type="String" />
+                        <asp:Parameter Name="SELLER_ID" Type="String" />
+                        <asp:Parameter Name="AGENT_ID" Type="String" />
+                        <asp:Parameter Name="HOUSE_ADDRESS" Type="String" />
+                        <asp:Parameter Name="HOUSE_STATE" Type="String" />
+                        <asp:Parameter Name="HOUSE_ASKINGPRICE" Type="Double" />
+                        <asp:Parameter Name="HOUSE_SELLINGPRICE" Type="Double" />
+                        <asp:Parameter Name="HOUSE_PICTURE" Type="String" />
+                        <asp:Parameter Name="HOUSE_ID" Type="String" />
+                    </UpdateParameters>
+                </asp:SqlDataSource>
             </div>
 
             <div id="addListing" style="padding: 15px; background-color: #FFFFFF;">

@@ -19,7 +19,7 @@ public partial class Sell_House : System.Web.UI.Page
 
         DataView dv2 = (DataView)SqlDataSource2.Select(DataSourceSelectArguments.Empty);
 
-        SqlDataSource2.InsertParameters["HOUSE_ID"].DefaultValue = "" + dv2.Count;
+        SqlDataSource2.InsertParameters["HOUSE_ID"].DefaultValue = "" + (dv2.Count + 6001).ToString();
         SqlDataSource2.InsertParameters["BUYER_ID"].DefaultValue = null;
         SqlDataSource2.InsertParameters["SELLER_ID"].DefaultValue = (string)dt.Rows[0]["ACC_LINKID"];
         SqlDataSource2.InsertParameters["AGENT_ID"].DefaultValue = ddl_agent.SelectedValue;
