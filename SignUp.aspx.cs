@@ -23,7 +23,6 @@ public partial class SignUp : System.Web.UI.Page
 
         
         accTable = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
-        Response.Write("<script>alert(accTable.Count)</script>");
         string userName = this.UserName.Text;
         string passWord = this.Password.Text;
         string type = "customer";
@@ -45,8 +44,12 @@ public partial class SignUp : System.Web.UI.Page
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
-            Response.Write("<script>alert('successful!');location='SignUp.aspx'</script>");
-            Response.Redirect("Default.aspx");
+            Response.Write("<script>alert('successful!')</script>");
+
+            Password.Text = null;
+            UserName.Text = null;
+            ConfirmPassword.Text = null;
+            
 
         }
         if (accountTable.Count == 1)

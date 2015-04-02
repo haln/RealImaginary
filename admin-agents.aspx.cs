@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Configuration;
+using System.Data.SqlClient;
 public partial class admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -13,8 +15,10 @@ public partial class admin : System.Web.UI.Page
     }
     protected void btnAddAgent_Click(object sender, EventArgs e)
     {
-        SqlDataSource1.InsertParameters["AGENT_ID"].DefaultValue = tbAgentID.Text;
-        SqlDataSource1.InsertParameters["AGENCY_ID"].DefaultValue = tbAgencyID.Text;
+        DataView agentTable = (DataView)SqlDataSource3.Select(DataSourceSelectArguments.Empty);
+        
+        SqlDataSource1.InsertParameters["AGENT_ID"].DefaultValue = (agentTable.Count + 3001).ToString();
+        SqlDataSource1.InsertParameters["AGENCY_ID"].DefaultValue = agencyDrop.SelectedValue;
         SqlDataSource1.InsertParameters["AGENT_LNAME"].DefaultValue = tbLName.Text;
         SqlDataSource1.InsertParameters["AGENT_FNAME"].DefaultValue = tbFName.Text;
         SqlDataSource1.InsertParameters["AGENT_ADDRESS"].DefaultValue = tbAddress.Text;
@@ -24,8 +28,7 @@ public partial class admin : System.Web.UI.Page
         try
         {
             SqlDataSource1.Insert();
-            tbAgentID.Text = "";
-            tbAgencyID.Text = "";
+            agencyDrop.SelectedValue = "";
             tbLName.Text = "";
             tbFName.Text = "";
             tbAddress.Text = "";
@@ -64,4 +67,11 @@ public partial class admin : System.Web.UI.Page
         }
     }
 
+    protected void signout_Click(object sender, EventArgs e)
+    {
+        Session["UserName"] = null;
+        Session["AccountType"] = null;
+
+        Response.Redirect("default.aspx");
+    }
 }
