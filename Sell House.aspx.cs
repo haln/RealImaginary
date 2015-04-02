@@ -27,7 +27,7 @@ public partial class Sell_House : System.Web.UI.Page
         SqlDataSource2.InsertParameters["HOUSE_STATE"].DefaultValue = "unsold";
         SqlDataSource2.InsertParameters["HOUSE_ASKINGPRICE"].DefaultValue = txt_price.Text;
         SqlDataSource2.InsertParameters["HOUSE_SELLINGPRICE"].DefaultValue = null;
-        SqlDataSource2.InsertParameters["HOUSE_PICTURE"].DefaultValue = null;
+        SqlDataSource2.InsertParameters["HOUSE_PICTURE"].DefaultValue = "house.png";
 
 
         try
