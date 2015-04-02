@@ -37,12 +37,12 @@
             <div id="admin">
                 <h1>Agents management</h1>
                 <div id="adminNavigation">
-                    <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="False" />
-                    <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="true" PostBackUrl="~/admin-listing.aspx" />
+                    <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="False" BackColor="#1472DC" ForeColor="White" Height="36px" BorderStyle="None"/>
+                    <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="true" PostBackUrl="~/admin-listing.aspx" BackColor="#ECAB1C" ForeColor="White" Height="36px" BorderStyle="None"/>
                 </div>
                 <br />
                 <div id="agentTable">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="AGENT_ID,AGENCY_ID">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="AGENT_ID,AGENCY_ID" BackColor="White">
                         <Columns>
                             <asp:BoundField DataField="AGENT_ID" HeaderText="AGENT ID" ReadOnly="True" SortExpression="AGENT_ID" />
                             <asp:BoundField DataField="AGENCY_ID" HeaderText="AGENCY ID" ReadOnly="True" SortExpression="AGENCY_ID" />
@@ -104,7 +104,7 @@
                         </UpdateParameters>
                     </asp:SqlDataSource>
                     <br />
-                     <div id="addAgent">
+                     <div id="addAgent" style="padding: 15px; background-color: #FFFFFF;">
                         <h2>Add an agent below:</h2>
                         <asp:Label ID="lblError" runat="server" EnableViewState="False"></asp:Label>
                         <br />

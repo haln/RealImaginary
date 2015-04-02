@@ -148,9 +148,9 @@ header {
 
 .signup {
     background-color: #14afa7;
+    float: right;
     width: 106px;
     height: 30px;
-    float: right;
     margin-left: 24px;
     margin-right: 24px;
 }
@@ -389,11 +389,18 @@ footer {
 }
 
 .signUpk {
+  color:#6f6a6a;
   padding: 15px;
-  background-color: beige;
-  /* border: darkgoldenrod; */
+  background-color:#ececec;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+}
+
+.signupBtn {
+    background-color: #14afa7;
+    margin-top:15px;
+    margin-left: auto;
+    margin-right: auto;
 }
