@@ -229,7 +229,7 @@ footer {
     margin-top: 20px;
     padding-top: 15px;
     height: 120px;
-    width: 80%;
+    width: 1138px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -240,23 +240,27 @@ footer {
     margin-left: auto;
     margin-right: auto;
     height: 40px;
-    width: 60%;
+    width: 683px;
 }
 
 #searchBar {
-    padding: 8px 15px;
-    border: 0px solid #dbdbdb;
+  margin-top: 4px;
+  padding: 8px 15px;
+  border: 0px solid #dbdbdb;
 }
 
 #searchSubmit {
-    position:relative;
-    padding: 6px 15px;
-    left: -7px;
-    border: 2px solid #207cca;
-    background-color: #207cca;
-    color: #fafafa;
-    top: 0px;
-    width: 86px;
+  float: right;
+  margin-top: 4px;
+  margin-right: 10px;
+  position: relative;
+  padding: 6px 15px;
+  left: -7px;
+  border: 2px solid #207cca;
+  background-color: #207cca;
+  color: #fafafa;
+  top: 0px;
+  width: 86px;
 }
 
 
@@ -292,7 +296,7 @@ footer {
 #resultsDiv {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 1138px;
     height: auto;
     margin-top: 20px;
 }

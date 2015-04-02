@@ -12,7 +12,7 @@
 </asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="UserName"
-                        ErrorMessage="*." Display="Dynamic" ValidationGroup="signup">
+                        ErrorMessage="*" Display="Static" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 
 </asp:TableCell>
@@ -24,7 +24,7 @@
 </asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Password"
-                          ErrorMessage="*." Display="Dynamic" ValidationGroup="signup">
+                          ErrorMessage="*" Display="Static" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 
 </asp:TableCell>
@@ -37,7 +37,7 @@
 </asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ConfirmPassword"
-                         ErrorMessage="*." Display="Dynamic" ValidationGroup="signup">
+                         ErrorMessage="*" Display="Static" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 
 </asp:TableCell>
