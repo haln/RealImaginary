@@ -389,7 +389,11 @@ footer {
 }
 
 .signUpk {
-    margin-left:auto;
-    margin-right:auto;
-    width:40%;
+  padding: 15px;
+  background-color: beige;
+  /* border: darkgoldenrod; */
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }

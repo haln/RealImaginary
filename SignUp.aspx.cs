@@ -44,8 +44,12 @@ public partial class SignUp : System.Web.UI.Page
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
-            Response.Write("<script>alert('successful!');location='SignUp.aspx'</script>");
-            Response.Redirect("Default.aspx");
+            Response.Write("<script>alert('successful!')</script>");
+
+            Password.Text = null;
+            UserName.Text = null;
+            ConfirmPassword.Text = null;
+            
 
         }
         if (accountTable.Count == 1)

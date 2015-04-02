@@ -11,17 +11,17 @@
                     <asp:TextBox ID="UserName" runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="UserName"
-                        ErrorMessage="User name is a required field." Display="Dynamic" ValidationGroup="signup">
+                        ErrorMessage="*." Display="Dynamic" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow>
                 <asp:TableCell>Password:</asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="Password" runat="server"></asp:TextBox></asp:TableCell>
+                    <asp:TextBox ID="Password" TextMode="Password" runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Password"
-                        TextMode="Password" ErrorMessage="Password is a required field." Display="Dynamic" ValidationGroup="signup">
+                          ErrorMessage="*." Display="Dynamic" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
@@ -32,14 +32,14 @@
                         runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ConfirmPassword"
-                         ErrorMessage="Confirm Password is a required field." Display="Dynamic" ValidationGroup="signup">
+                         ErrorMessage="*." Display="Dynamic" ValidationGroup="signup">
                     </asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableFooterRow>
                 <asp:TableCell>
                     <asp:Button ID="Signup" runat="server" Text="SignUp" OnClick="Button1_Click" ValidationGroup="signup" />
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="The confirm password is not the same as the above one" ControlToCompare="Password" ControlToValidate="ConfirmPassword" ValidationGroup="signup"></asp:CompareValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="The confirm password has to be the same as above" ControlToCompare="Password" ControlToValidate="ConfirmPassword" ValidationGroup="signup"></asp:CompareValidator>
                 </asp:TableCell>
             </asp:TableFooterRow>
         </asp:Table>
