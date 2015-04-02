@@ -79,26 +79,46 @@
                             <asp:Parameter Name="AGENCY_ID" Type="String" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT]" DeleteCommand="DELETE FROM [AGENT] WHERE [AGENT_ID] = @AGENT_ID AND [AGENCY_ID] = @AGENCY_ID" InsertCommand="INSERT INTO [AGENT] ([AGENT_ID], [AGENCY_ID], [AGENT_LNAME], [AGENT_FNAME], [AGENT_ADDRESS], [AGENT_PHONE], [AGENT_EMAIL]) VALUES (@AGENT_ID, @AGENCY_ID, @AGENT_LNAME, @AGENT_FNAME, @AGENT_ADDRESS, @AGENT_PHONE, @AGENT_EMAIL)" UpdateCommand="UPDATE [AGENT] SET [AGENT_LNAME] = @AGENT_LNAME, [AGENT_FNAME] = @AGENT_FNAME, [AGENT_ADDRESS] = @AGENT_ADDRESS, [AGENT_PHONE] = @AGENT_PHONE, [AGENT_EMAIL] = @AGENT_EMAIL WHERE [AGENT_ID] = @AGENT_ID AND [AGENCY_ID] = @AGENCY_ID">
+                        <DeleteParameters>
+                            <asp:Parameter Name="AGENT_ID" Type="String" />
+                            <asp:Parameter Name="AGENCY_ID" Type="String" />
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="AGENT_ID" Type="String" />
+                            <asp:Parameter Name="AGENCY_ID" Type="String" />
+                            <asp:Parameter Name="AGENT_LNAME" Type="String" />
+                            <asp:Parameter Name="AGENT_FNAME" Type="String" />
+                            <asp:Parameter Name="AGENT_ADDRESS" Type="String" />
+                            <asp:Parameter Name="AGENT_PHONE" Type="String" />
+                            <asp:Parameter Name="AGENT_EMAIL" Type="String" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="AGENT_LNAME" Type="String" />
+                            <asp:Parameter Name="AGENT_FNAME" Type="String" />
+                            <asp:Parameter Name="AGENT_ADDRESS" Type="String" />
+                            <asp:Parameter Name="AGENT_PHONE" Type="String" />
+                            <asp:Parameter Name="AGENT_EMAIL" Type="String" />
+                            <asp:Parameter Name="AGENT_ID" Type="String" />
+                            <asp:Parameter Name="AGENCY_ID" Type="String" />
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
                     <br />
                      <div id="addAgent">
                         <h2>Add an agent below:</h2>
                         <asp:Label ID="lblError" runat="server" EnableViewState="False"></asp:Label>
                         <br />
                         <table>
+                            
                             <tr>
-                                <td>Agent ID</td>
+                                <td>Agency</td>
                                 <td class="auto-style1">
-                                    <asp:TextBox ID="tbAgentID" runat="server"></asp:TextBox></td>
-                                <td>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbAgentID"></asp:RequiredFieldValidator>
+                                    <asp:DropDownList ID="agencyDrop" runat="server" DataSourceID="SqlDataSource2" DataTextField="AGENCY_ADDRESS" DataValueField="AGENCY_ID">
+                                    </asp:DropDownList>
+                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [AGENCY_ID], [AGENCY_ADDRESS] FROM [AGENCY]"></asp:SqlDataSource>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>Agency ID</td>
-                                <td class="auto-style1">
-                                    <asp:TextBox ID="tbAgencyID" runat="server"></asp:TextBox></td>
                                 <td>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbAgencyID"></asp:RequiredFieldValidator></td>
+                                    &nbsp;</td>
                             </tr>
                             <tr>
                                 <td>Last Name</td>
