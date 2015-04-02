@@ -196,14 +196,13 @@
                         <td class="auto-style1">
                             <asp:TextBox ID="tbSelling" runat="server"></asp:TextBox></td>
                         <td class="auto-style1">
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbSelling"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbSelling" EnableViewState="False" ErrorMessage="number only" ValidationExpression="^[0-9]*$" ValidationGroup="add"></asp:RegularExpressionValidator>
                         </td>
 
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btnAddProperty" runat="server" Text="Add new property" ValidationGroup="add" OnClick="btnAddAgent_Click" /></td>
+                            <asp:Button ID="btnAddProperty" runat="server" Text="Add new property" ValidationGroup="add" OnClick="btnAddProperty_Click"  /></td>
                     </tr>
                 </table>
 

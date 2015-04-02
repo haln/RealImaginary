@@ -53,16 +53,38 @@
             <asp:SessionParameter Name="ACC_USER" SessionField="username" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <h5>Add a house to the market:</h5>
-    Select your agent: <asp:DropDownList ID="ddl_agent" runat="server" DataSourceID="SqlDataSource1" DataTextField="AGENT_FNAME" DataValueField="AGENT_ID"></asp:DropDownList>
-    <br />
-    Enter the address: <asp:TextBox ID="txt_address" runat="server"></asp:TextBox>
-    <br />
-    Enter your asking price: <asp:TextBox ID="txt_price" runat="server"></asp:TextBox>
-    <br />
-    <br />
-    <asp:Button ID="btn_sell" runat="server" Text="Add to Market" OnClick="btn_sell_Click" />
+    
+    <div class="signUpk">
+        <h4>Add a house to the market:</h4>
+        <asp:Table ID="Table1" runat="server" Width="434px">
+            <asp:TableRow>
+                   <asp:TableCell> Select your agent: </asp:TableCell>
+                       <asp:TableCell>
+                           <asp:DropDownList ID="ddl_agent" runat="server" DataSourceID="SqlDataSource1" DataTextField="AGENT_FNAME" DataValueField="AGENT_ID"></asp:DropDownList>
+                       </asp:TableCell>                
+            </asp:TableRow>
+
+            <asp:TableRow>
+                   <asp:TableCell> Enter the address:</asp:TableCell>
+                       <asp:TableCell>
+                             <asp:TextBox ID="txt_address" runat="server"></asp:TextBox>
+                       </asp:TableCell>                
+            </asp:TableRow>
+
+            <asp:TableRow>
+                   <asp:TableCell> Enter your asking price: </asp:TableCell>
+                       <asp:TableCell>
+                             <asp:TextBox ID="txt_price" runat="server"></asp:TextBox>
+                       </asp:TableCell>                
+            </asp:TableRow>
+
+        </asp:Table>
+    
+                   
+
+    <asp:Button ID="btn_sell" runat="server" Text="Add to Market" OnClick="btn_sell_Click" cssClass="signupBtn" ForeColor="White" BorderStyle="None" Height="32px" Width="189px" BackColor="#ECAB1C"/>
     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+        </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" Runat="Server">
 </asp:Content>

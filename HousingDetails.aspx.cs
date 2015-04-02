@@ -29,7 +29,7 @@ public partial class _Default : System.Web.UI.Page
         {
             lbl_address.Text = ((House)Session["House"]).address.ToString();
             lbl_age.Text = ((House)Session["House"]).age;
-            lbl_ask.Text = ((House)Session["House"]).askPrice;
+            lbl_ask.Text = String.Format("{0:C}", Decimal.Parse(((House)Session["House"]).askPrice.ToString()));
             lbl_bath.Text = ((House)Session["House"]).baths;
             lbl_bed.Text = ((House)Session["House"]).beds;
             lbl_features.Text = ((House)Session["House"]).features;

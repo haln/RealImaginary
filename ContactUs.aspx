@@ -5,7 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="agentMain">
-        <h1>Our agents</h1>
+        <br/>
+        <h3 >Our agents</h3>
 
         <asp:DataList ID="agentList" runat="server" BackColor="#0E86CB" BorderColor="White" BorderStyle="None" BorderWidth="2px" CellPadding="14" DataKeyField="AGENT_ID" DataSourceID="SqlDataSource1" GridLines="Both" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" RepeatColumns="3" HorizontalAlign="Center" CellSpacing="4">
 

@@ -13,25 +13,27 @@
             <div class="detail1">
             <asp:Label ID="lbl_address" runat="server" Text="" CssClass="address"></asp:Label>           
                 <br />
-            House Type: <asp:Label ID="lbl_type" runat="server" Text=""></asp:Label> 
+                <br />
+            House Type: <asp:Label ID="lbl_type" runat="server" ForeColor="#666666"></asp:Label> 
                 <br />
             <br/>
-            Bedrooms: <asp:Label ID="lbl_bed" runat="server" Text=""></asp:Label>
+            Bedrooms: <asp:Label ID="lbl_bed" runat="server" ForeColor="#666666"></asp:Label>
                 <br />          
                 <br />            
-            Bathrooms: <asp:Label ID="lbl_bath" runat="server" Text=""></asp:Label>           
+            Bathrooms: <asp:Label ID="lbl_bath" runat="server" ForeColor="#666666"></asp:Label>           
                 <br />           
                 <br />         
-            Age: <asp:Label ID="lbl_age" runat="server" Text=""></asp:Label>
+            Age: <asp:Label ID="lbl_age" runat="server" ForeColor="#666666"></asp:Label>
             </div>         
             <div class="detail2">
-            <p class="askingPrice">$<asp:Label ID="lbl_ask" runat="server" Text="" CssClass="price"></asp:Label></p>
-             Square Feet: <asp:Label ID="lbl_sqrFeet" runat="server" Text=""></asp:Label>
+            <p class="askingPrice"><asp:Label ID="lbl_ask" runat="server" Text="" CssClass="price"></asp:Label></p>
+             Square Feet: 
+                <asp:Label ID="lbl_sqrFeet" runat="server" Font-Size="Medium" ForeColor="#666666"></asp:Label>
                 <br />
             <br />
-            Property Sqaure Feet: <asp:Label ID="lbl_propSqrFeet" runat="server" Text=""></asp:Label>
-                <br/>
-            Additional Features: <asp:Label ID="lbl_features" runat="server" Text=""></asp:Label>
+            Property Sqaure Feet: <asp:Label ID="lbl_propSqrFeet" runat="server" ForeColor="#666666"></asp:Label>
+                <br/><br/>
+            Additional Features: <asp:Label ID="lbl_features" runat="server" ForeColor="#666666"></asp:Label>
             </div>
             <br />   
         <div class="detail3">

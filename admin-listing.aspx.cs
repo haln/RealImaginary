@@ -22,11 +22,16 @@ public partial class admin_listing : System.Web.UI.Page
             manage.Visible = false;
 
         }
+        if ((string)Session["AccountType"] != "admin")
+        {
+            btnAgentsManage.Visible = false;
+            btnListingManage.Visible = false;
+        }
 
     }
 
 
-    protected void btnAddAgent_Click(object sender, EventArgs e)
+    protected void btnAddProperty_Click(object sender, EventArgs e)
     {
         DataView houseTable = (DataView)SqlDataSource6.Select(DataSourceSelectArguments.Empty);
 
