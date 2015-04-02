@@ -32,13 +32,13 @@
             </header>
             <div id="adminHeader">
                 <h1>Listing management</h1>
-                <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="true" PostBackUrl="~/admin-agents.aspx" />
-                <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="false" />
+                <asp:Button ID="btnAgentsManage" runat="server" Text="Agents Management" Enabled="true" PostBackUrl="~/admin-agents.aspx" BackColor="#1472DC" ForeColor="White" Height="36px" BorderStyle="None"/>
+                <asp:Button ID="btnListingManage" runat="server" Text="Listing Management" Enabled="false" BackColor="#ECAB1C" ForeColor="White" Height="36px" BorderStyle="None"/>
                 <br />
             </div>
 
             <div id="listing">
-                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="HOUSE_ID" DataSourceID="SqlDataSource1">
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="HOUSE_ID" DataSourceID="SqlDataSource1" BackColor="White">
                     <Columns>
                         <asp:BoundField DataField="HOUSE_ID" HeaderText="HOUSE_ID" ReadOnly="True" SortExpression="HOUSE_ID" />
                         <asp:BoundField DataField="BUYER_ID" HeaderText="BUYER_ID" SortExpression="BUYER_ID" />

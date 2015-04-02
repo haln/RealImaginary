@@ -6,7 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">   
     <div id="agentMain">
         <h1>Our agents</h1>
-        <asp:DataList ID="agentList" runat="server" BackColor="#ecab1c" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyField="AGENT_ID" DataSourceID="SqlDataSource1" GridLines="Both" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" RepeatColumns="3">
+        <asp:DataList ID="agentList" runat="server" BackColor="#2873C8" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="8" DataKeyField="AGENT_ID" DataSourceID="SqlDataSource1" GridLines="Both" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Size="Large" Font-Strikeout="False" Font-Underline="False" RepeatColumns="3" CellSpacing="2">
             <FooterStyle BackColor="White" ForeColor="#000066" />
             <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
             <ItemStyle ForeColor="#000066" />
@@ -33,6 +33,7 @@
 <br />
             </ItemTemplate>
             <SelectedItemStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+            <SeparatorStyle BackColor="#FF66FF" />
         </asp:DataList>
         </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [AGENT] ORDER BY [AGENCY_ID]"></asp:SqlDataSource>
