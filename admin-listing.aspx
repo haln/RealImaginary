@@ -201,7 +201,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="btnAddProperty" runat="server" Text="Add new property" ValidationGroup="add" OnClick="btnAddProperty_Click" /></td>
+                            <asp:Button ID="btnAddProperty" runat="server" Text="Add new property" ValidationGroup="add" OnClick="btnAddProperty_Click"  /></td>
                     </tr>
                 </table>
 

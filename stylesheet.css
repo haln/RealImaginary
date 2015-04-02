@@ -163,9 +163,7 @@ header {
     margin-left: 24px;
     margin-right: 24px;
 }
-.lblWelcome {
-    float: right;
-}
+
 .userName {
     width: 200px;
     height: 24px;
@@ -397,7 +395,7 @@ footer {
 .signUpk {
   color:#6f6a6a;
   padding: 15px;
-  background-color:#ececec;
+  background-color:#dbdbdb;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
