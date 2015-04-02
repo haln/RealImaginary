@@ -24,16 +24,16 @@
                             <asp:Button ID="signin" runat="server" Text="Sign In" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="signin_Click" />
                             <asp:Button ID="signout" runat="server" Text="Sign Out" CssClass="signup" ForeColor="White" BorderStyle="None" OnClick="signout_Click" Visible="False" />
                             <asp:Button ID="manage" runat="server" Text="Manage" CssClass="signin" ForeColor="White" BorderStyle="None" OnClick="manage_Click" Visible="False" />
-                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [ACCOUNT] WHERE (([ACC_USER] = @ACC_USER) AND ([ACC_PASS] = @ACC_PASS))" >
+                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT * FROM [ACCOUNT] WHERE (([ACC_USER] = @ACC_USER) AND ([ACC_PASS] = @ACC_PASS))">
                                 <SelectParameters>
                                     <asp:ControlParameter ControlID="username" Name="ACC_USER" PropertyName="Text" Type="String" />
                                     <asp:ControlParameter ControlID="password" Name="ACC_PASS" PropertyName="Text" Type="String" />
                                 </SelectParameters>
-                            </asp:SqlDataSource> 
+                            </asp:SqlDataSource>
                             <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="White"></asp:Label>
-                            <asp:TextBox ID="password" runat="server"  CssClass="userPw" ForeColor="Silver" TextMode="Password" placeholder="password"></asp:TextBox>
-                            <asp:TextBox ID="username" runat="server"  CssClass="userName" BorderStyle="Inset" ForeColor="Silver" placeholder="username"></asp:TextBox>
-                         
+                            <asp:TextBox ID="password" runat="server" CssClass="userPw" ForeColor="Silver" TextMode="Password" placeholder="password"></asp:TextBox>
+                            <asp:TextBox ID="username" runat="server" CssClass="userName" BorderStyle="Inset" ForeColor="Silver" placeholder="username"></asp:TextBox>
+
                         </div>
                     </div>
                 </asp:Panel>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="menu">
                     <asp:Button ID="listProperty" runat="server" Text="Property Listing" CssClass="listProperty" ForeColor="White" BorderStyle="None" PostBackUrl="~/Default.aspx" />
-                    <asp:Button ID="Selling" runat="server" Text="Selling A House" CssClass="Selling" ForeColor="White" BorderStyle="None" />
+                    <asp:Button ID="Selling" runat="server" Text="Selling A House" CssClass="Selling" ForeColor="White" BorderStyle="None" PostBackUrl="~/Sell House.aspx" />
                     <asp:Button ID="ContactUs" runat="server" Text="Contact Us" CssClass="ContactUs" ForeColor="White" BorderStyle="None" PostBackUrl="~/ContactUs.aspx" />
                 </div>
             </header>
@@ -137,7 +137,7 @@
                 <br />
                 <table>
 
-                    
+
                     <tr>
                         <td>Buyer:</td>
                         <td class="auto-style1">
@@ -145,8 +145,7 @@
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [BUYER_ID], [BUYER_LNAME], [BUYER_FNAME] FROM [BUYER] ORDER BY [BUYER_LNAME]"></asp:SqlDataSource>
                         </td>
-                        <td class="auto-style1">
-                            &nbsp;</td>
+                        <td class="auto-style1">&nbsp;</td>
                     </tr>
                     <tr>
                         <td>Seller:</td>
@@ -155,8 +154,7 @@
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [SELLER_ID], [SELLER_LNAME], [SELLER_FNAME] FROM [SELLER]"></asp:SqlDataSource>
                         </td>
-                        <td class="auto-style1">
-                            &nbsp;</td>
+                        <td class="auto-style1">&nbsp;</td>
                     </tr>
                     <tr>
                         <td>Agent:</td>
@@ -165,8 +163,7 @@
                             </asp:DropDownList>
                             <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:RealImaginaryConnectionString %>" SelectCommand="SELECT [AGENT_ID], [AGENT_LNAME], [AGENT_FNAME] FROM [AGENT]"></asp:SqlDataSource>
                         </td>
-                        <td class="auto-style1">
-                            &nbsp;</td>
+                        <td class="auto-style1">&nbsp;</td>
                     </tr>
                     <tr>
                         <td>Address:</td>
@@ -183,26 +180,25 @@
                                 <asp:ListItem>sold</asp:ListItem>
                             </asp:RadioButtonList>
                         </td>
-                        <td class="auto-style1">
-                            &nbsp;</td>
+                        <td class="auto-style1">&nbsp;</td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>Asking price:</td>
                         <td class="auto-style1">
                             <asp:TextBox ID="tbAsking" runat="server"></asp:TextBox></td>
                         <td class="auto-style1">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbAsking"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbAsking" EnableViewState="False" ErrorMessage="number only" ValidationExpression="^[0-9]*$" ValidationGroup="add"></asp:RegularExpressionValidator>
-                         </td>
+                        </td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td>Selling price:</td>
                         <td class="auto-style1">
                             <asp:TextBox ID="tbSelling" runat="server"></asp:TextBox></td>
                         <td class="auto-style1">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="required" ValidationGroup="add" ControlToValidate="tbSelling"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbSelling" EnableViewState="False" ErrorMessage="number only" ValidationExpression="^[0-9]*$" ValidationGroup="add"></asp:RegularExpressionValidator>
-                         </td>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -211,9 +207,9 @@
                 </table>
 
             </div>
-        <footer>
-            <p>Created by Real Imaginary</p>
-        </footer>
+            <footer>
+                <p>Created by Real Imaginary</p>
+            </footer>
         </div>
     </form>
 </body>
