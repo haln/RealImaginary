@@ -59,7 +59,7 @@
                 </div>
                 <div class="menu">
                     <asp:Button ID="listProperty" runat="server" Text="Property Listing" CssClass="listProperty" ForeColor="White" BorderStyle="None" PostBackUrl="~/Default.aspx" />
-                    <asp:Button ID="Selling" runat="server" Text="Selling A House" CssClass="Selling" ForeColor="White" BorderStyle="None" />
+                    <asp:Button ID="Selling" runat="server" Text="Selling A House" CssClass="Selling" ForeColor="White" BorderStyle="None" PostBackUrl="~/Sell House.aspx"/>
                     <asp:Button ID="ContactUs" runat="server" Text="Contact Us" CssClass="ContactUs" ForeColor="White" BorderStyle="None" PostBackUrl="~/ContactUs.aspx"/>
                 </div>
                 <asp:ContentPlaceHolder ID="header" runat="server">
@@ -68,10 +68,10 @@
             <asp:Panel ID="searchPanel" runat="server" DefaultButton="searchSubmit">
                 <div id="searchbox">
                     <div id="search">      
-                         <span>
+                         
                              <asp:TextBox runat="server" ID="searchBar" placeholder="Enter an address" Width="463px" ></asp:TextBox>
                              <asp:Button ID="searchSubmit" runat="server" Text="Search" OnClick="Button1_Click" />
-                         </span>   
+                            
                     <br/>
                     </div>
                     <div id="filter">
